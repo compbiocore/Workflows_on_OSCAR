@@ -1,0 +1,8 @@
+providers {
+
+  github {
+  user = 'me'
+  password = 'my-personal-access-token'
+  }
+
+}
