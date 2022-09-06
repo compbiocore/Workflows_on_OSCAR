@@ -1,4 +1,4 @@
-# Workflows_on_OSCAR
+# Workflows on OSCAR
 
 This repo tracks the development of user-friendly tools for installing and configuring Nextflow and Snakemake workflow management tools on Brown's HPC 
 cluster, OSCAR, so that users can easily and efficiently deploy reproducible, scalable pipelines for compute intensive tasks. 
