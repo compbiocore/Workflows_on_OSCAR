@@ -139,6 +139,9 @@ while True:
                 'cpus = ' + str(default_numbers[2]) +  '  //default cpus':'cpus = ' + str(cpu_request) + '  //default cpus'}
                 for i in replacements.keys():
                     replacetext(i, replacements[i])
+                # Move nextflow.config file to .nextflow folder so it is a software default 
+                os.system('copy ' + next_config + ' $HOME/.nextflow/config')
+                # Print output messaging for user 
                 print("\nOUTPUT MESSAGE:")
                 header="""
                 ******************************************************************
@@ -161,6 +164,9 @@ while True:
                 next_dir=homedir + "/nextflow_env_" + username + "/bin/activate"
                 print("To run Nextflow pipelines, first activate the software using the following command: \nsource " + str(next_dir) + "\n")
             if hpc=="no":
+                # Move nextflow.config file to .nextflow folder so it is a software default 
+                os.system('copy ' + next_config + ' $HOME/.nextflow/config')
+                # Print output messaging for user 
                 print("Keeping defaults!")
                 print("\nOUTPUT MESSAGE:")
                 header="""
