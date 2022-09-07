@@ -140,7 +140,7 @@ while True:
                 for i in replacements.keys():
                     replacetext(i, replacements[i])
                 # Move nextflow.config file to .nextflow folder so it is a software default 
-                os.system('copy ' + next_config + ' $HOME/.nextflow/config')
+                os.system('cp ' + next_config + ' $HOME/.nextflow/config')
                 # Print output messaging for user 
                 print("\nOUTPUT MESSAGE:")
                 header="""
@@ -165,7 +165,7 @@ while True:
                 print("To run Nextflow pipelines, first enter the following command into either the command line or in an sbatch script: \nsource " + str(next_dir) + "\n")
             if hpc=="no":
                 # Move nextflow.config file to .nextflow folder so it is a software default 
-                os.system('copy ' + next_config + ' $HOME/.nextflow/config')
+                os.system('cp ' + next_config + ' $HOME/.nextflow/config')
                 # Print output messaging for user 
                 print("Keeping defaults!")
                 print("\nOUTPUT MESSAGE:")
