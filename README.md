@@ -7,7 +7,7 @@ cluster, OSCAR, so that users can easily and efficiently deploy reproducible, sc
 ## 1. Configuring and running Nextflow 
 
 The nextflow_setup folder contains all the pieces neccessary to install, configure, and run nextflow pipelines on OSCAR. To install and configure, just 
-`git clone` the `nextflow_setup` repo folder into your `HOME` directory on OSCAR. Once this has been done, you can simply type the following command:
+`git clone` this repo into your `HOME` directory on OSCAR and then move the `nextflow_setup` folder inside of the repo folder to your `HOME` directory. Once this has been done, you can simply type the following command:
 
 ```bash ~/nextflow_setup/install_me/install.sh```
 
