@@ -1,4 +1,4 @@
-#!bin/bash -i
+#!/bin/bash  -i
 
 env_var="nextflow_env_${USER}"
 cd $HOME
