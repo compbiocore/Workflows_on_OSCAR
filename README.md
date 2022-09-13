@@ -16,10 +16,13 @@ When launched, the CLI tool will prompt the user to type the name of the softwar
 Once the installation and configuration process is done, users can run nextflow pipelines using their own custom workflows, workflows from github repos, 
 or workflows from nf-core. The use of singularity containers is automatically enabled and users can flexibly incorporate different containers into their workflow pipelines. 
 
-To run Nextflow, first enter: `nextflow_start` 
-\n***Note that you can use the above `nextflow_start` command in an interactive session on OSCAR (via `interact`) or in an sbatch script by putting the `nextflow_start` command before any `nextflow run` commands in the script. 
+### Important commands
 
-To uninstall (delete) Nextflow, type: `nextflow_remove`
+a. To run Nextflow, first enter: `nextflow_start` 
+
+NOTE: you can use the above `nextflow_start` command in an interactive session on OSCAR (via `interact`) or in an sbatch script by putting the `nextflow_start` command before any `nextflow run` commands in the script. 
+
+b. To uninstall (delete) Nextflow, type: `nextflow_remove`
 
 ## 2. Configuring and running Snakemake
 
