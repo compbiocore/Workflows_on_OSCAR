@@ -162,7 +162,7 @@ while True:
                 print("\nPlease see https://github.com/compbiocore/Workflows_on_OSCAR for further details on how to add the above label options to your workflow.\n")
                 print("Note the setup is designed such that pipelines downloaded from nf-core with their own resource specs within the .nf script will override your defaults\n")
                 next_dir=homedir + "/nextflow_env_" + username + "/bin/activate"
-                print("To run Nextflow pipelines, first type the following command into either the command line or in an sbatch script: nextflow_start \n")
+                print("To run Nextflow pipelines, first type nextflow_start into either the command line or in an sbatch script. \n")
             if hpc=="no":
                 # Move nextflow.config file to .nextflow folder so it is a software default 
                 os.system('cp ' + next_config + ' $HOME/.nextflow/config')
@@ -188,7 +188,7 @@ while True:
                 print("\nPlease see https://github.com/compbiocore/Workflows_on_OSCAR for further details on how to add the above label options to your workflow.\n")
                 print("Note the setup is designed such that pipelines downloaded from nf-core with their own resource specs within the .nf script will override your defaults\n")
                 next_dir=homedir + "/nextflow_env_" + username + "/bin/activate"
-                print("To run Nextflow pipelines, first type the following command into either the command line or in an sbatch script: nextflow_start \n")
+                print("To run Nextflow pipelines, first type nextflow_start into either the command line or in an sbatch script. \n")
             break
         if program=="snakemake":
             print("Snakemake is not yet supported, but it is coming soon!")
