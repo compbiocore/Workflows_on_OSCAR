@@ -1,3 +1,5 @@
+#!bin/bash
+
 # Back up .bashrc, just in case 
 cp ~/.bashrc ~/.bashrc.bak
 # Load needed modules 
