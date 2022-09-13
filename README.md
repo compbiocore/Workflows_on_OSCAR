@@ -5,7 +5,7 @@ cluster, OSCAR, so that users can easily and efficiently deploy reproducible, sc
 
 To set up Nextflow and Snakemake for OSCAR, just `git clone` this repo into your `HOME` directory on OSCAR. Once this is done, you can then type the following command: 
 
-```source ~/workflows_on_OSCAR/install_me/install.sh```
+```bash ~/workflows_on_OSCAR/install_me/install.sh```
 
 Typing the above command will walk the user through a user-friendly guide to setting up and configuring Nextflow and Snakemake to run on OSCAR according to the user's computing needs. 
 
