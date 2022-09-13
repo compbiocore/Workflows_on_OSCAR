@@ -18,6 +18,6 @@ fi
 # change .bashrc and source aliases to make it more user-friendly 
 if [ ! -f "$HOME/.nextflow_specific_aliases" ]; then touch ~/.nextflow_specific_aliases; fi 
 echo 'alias nextflow_start="source ~/nextflow_env_${USER}/bin/activate"' >> $HOME/.nextflow_specific_aliases 
-echo 'alias nextflow_remove="rm -rf ~/nextflow_env_${USER} ~/.nextflow_specific_aliases"' >> $HOME/.nextflow_specific_aliases 
+echo 'alias nextflow_remove="rm -rf ~/nextflow_env_${USER} ~/nextflow_setup ~/.nextflow_specific_aliases"' >> $HOME/.nextflow_specific_aliases 
 grep -qxF 'if [ -e $HOME/.nextflow_specific_aliases ]; then source $HOME/.nextflow_specific_aliases; fi' ~/.bashrc || echo 'if [ -e $HOME/.nextflow_specific_aliases ]; then source $HOME/.nextflow_specific_aliases; fi' >> ~/.bashrc
 . ~/.bashrc
