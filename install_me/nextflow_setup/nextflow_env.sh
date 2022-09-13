@@ -1,3 +1,5 @@
+#!bin/bash
+
 env_var="nextflow_env_${USER}"
 cd $HOME
 if [ ! -d "$HOME/$env_var" ]; then
