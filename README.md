@@ -18,7 +18,7 @@ or workflows from nf-core. The use of singularity containers is automatically en
 
 ### Important commands
 
-a.) To be able to run Nextflow commands, first enter: `nextflow_start` 
+a.) To be able to run Nextflow commands, first type: `nextflow_start` 
 
 NOTE: you can use the above `nextflow_start` command in an interactive session on OSCAR (via `interact`) or in an sbatch script by putting the `nextflow_start` command before any `nextflow run` commands in the script. 
 
