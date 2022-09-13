@@ -17,7 +17,7 @@ Once the installation and configuration process is done, users can run nextflow 
 or workflows from nf-core. The use of singularity containers is automatically enabled and users can flexibly incorporate different containers into their workflow pipelines. 
 
 To run Nextflow, first enter: `nextflow_start` 
-***Note that you can use the above `nextflow_start` command in an interactive session on OSCAR (via `interact`) or in an sbatch script by putting the `nextflow_start` command before any `nextflow run` commands in the script. 
+\n***Note that you can use the above `nextflow_start` command in an interactive session on OSCAR (via `interact`) or in an sbatch script by putting the `nextflow_start` command before any `nextflow run` commands in the script. 
 
 To uninstall (delete) Nextflow, type: `nextflow_remove`
 
