@@ -159,7 +159,7 @@ while True:
                 3. label 'OSCAR_large_job' (comes with memory = 16 GB, time = 24 hours, cpus = 2)
                 """
                 print(instructions)
-                print("\nPlease see https://github.com/compbiocore/Workflows_on_OSCAR for further details on how to add the above label options to your workflow.\n")
+                print("\nPlease see https://github.com/compbiocore/workflows_on_OSCAR for further details on how to add the above label options to your workflow.\n")
                 print("Note the setup is designed such that pipelines downloaded from nf-core with their own resource specs within the .nf script will override your defaults\n")
                 next_dir=homedir + "/nextflow_env_" + username + "/bin/activate"
                 print("To run Nextflow pipelines, first type nextflow_start into either the command line or in an sbatch script. \n")
@@ -185,7 +185,7 @@ while True:
                 3. label 'OSCAR_large_job' (comes with memory = 16 GB, time = 24 hours, cpus = 2)
                 """
                 print(instructions)
-                print("\nPlease see https://github.com/compbiocore/Workflows_on_OSCAR for further details on how to add the above label options to your workflow.\n")
+                print("\nPlease see https://github.com/compbiocore/workflows_on_OSCAR for further details on how to add the above label options to your workflow.\n")
                 print("Note the setup is designed such that pipelines downloaded from nf-core with their own resource specs within the .nf script will override your defaults\n")
                 next_dir=homedir + "/nextflow_env_" + username + "/bin/activate"
                 print("To run Nextflow pipelines, first type nextflow_start into either the command line or in an sbatch script. \n")
