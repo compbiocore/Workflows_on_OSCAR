@@ -141,6 +141,7 @@ while True:
                     replacetext(i, replacements[i])
                 # Move nextflow.config file to .nextflow folder so it is a software default 
                 os.system('cp ' + next_config + ' $HOME/.nextflow/config')
+                os.system('source ~/.bashrc')
                 # Print output messaging for user 
                 print("\nOUTPUT MESSAGE:")
                 header="""
@@ -166,6 +167,7 @@ while True:
             if hpc=="no":
                 # Move nextflow.config file to .nextflow folder so it is a software default 
                 os.system('cp ' + next_config + ' $HOME/.nextflow/config')
+                os.system('source ~/.bashrc')
                 # Print output messaging for user 
                 print("Keeping defaults!")
                 print("\nOUTPUT MESSAGE:")
