@@ -11,7 +11,7 @@ Typing the above command will walk the user through a user-friendly guide to set
 
 ## 1. Configuring and running Nextflow 
 
-When launched, the CLI tool will prompt the user to type the name of the software they wish to install and set up.  Just enter 'Nextflow' and you will be guided through the rest. 
+When launched, the CLI tool will prompt the user to type the name of the software they wish to install and set up.  Just enter `Nextflow` and you will be guided through the rest. 
 
 Once the installation and configuration process is done, users can run nextflow pipelines using their own custom workflows, workflows from github repos, 
 or workflows from nf-core. The use of singularity containers is automatically enabled and users can flexibly incorporate different containers into their workflow pipelines. 
