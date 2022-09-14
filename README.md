@@ -1,7 +1,7 @@
 # Workflows on OSCAR
 
 This repo tracks the development of a user-friendly CLI tool for installing and configuring Nextflow and Snakemake workflow management tools on Brown's HPC 
-cluster, OSCAR, so that users can easily and efficiently deploy reproducible, scalable pipelines for compute intensive tasks. 
+cluster, OSCAR, so that users can easily and efficiently deploy reproducible, scalable pipelines for compute intensive tasks. Please read this entire README for important information before attempting to run your pipelines using this tool. 
 
 **Note:** This tool is currently still in beta and being tested. If there are any issues or bugs, please report to: [jordan_lawson@brown.edu](mailto:jordan_lawson@brown.edu) 
 
@@ -28,7 +28,7 @@ or workflows from nf-core. The use of singularity containers is automatically en
 - `quit_workflow` exits you out of the Nextflow working session you entered into. If you run this, you will be taken out of your session and unable to run any Nextflow commands until you run `nextflow_start` again. Note that you do not put this command in your sbatch scripts.
 - `nextflow_remove` uninstalls (deletes) Nextflow and all its commands (i.e., `nextflow_start`, `nextflow run`, `nextflow_remove`) 
 
-### Nextflow Template Script (to help you easily run Nextflow pipelines on OSCAR)
+### Nextflow Template Script for OSCAR
 
 Once Nextflow has been successfully installed and configured on OSCAR, you will find a script called `nextflow_template_script.sh` in the `~/nextflow_setup` directory on OSCAR. This is a template script that you can easily edit and use to run Nextflow pipelines on OSCAR using `sbatch`. To do so, first copy this file to your project directory (or to any other directory you need it) and rename the file. A general example of how to do this would be: 
 ```cp ~/nextflow_setup/nextflow_template_script.sh /directory/of/your/choosing/nextflow_run.sh```
