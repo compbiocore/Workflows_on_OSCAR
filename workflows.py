@@ -204,7 +204,7 @@ while True:
             # Ask for inputs for configuring setup 
             user_email=input("What is your Brown email address? ")
             new_mail="mail-user: " + user_email
-            os.system("sed -i.bak 's/mail-user:.*/" + new_mail + '/g ' + snake_config)
+            os.system("sed -i.bak 's/mail-user:.*/" + new_mail + "/g' " + snake_config)
             # Prompt user to specify HPC resources, if desired 
             default_resources=os.popen('grep "^default-resources:" ' + snake_config).read()
             default_resources=default_resources.split('[', 1)[1].split(']')[0]
@@ -254,6 +254,7 @@ while True:
                 default_numbers=default_resources.replace("=", " ")
                 default_numbers=default_numbers.replace(",", " ")
                 default_numbers=[int(s) for s in default_numbers.split() if s.isdigit()]
+                print(default_numbers)
                 replacements = {"[cpus=" + str(default_numbers[0]) + ",": '[cpus=' + str(cpu_request) + ',', 
                 'mem_mb=' + str(default_numbers[1]) + ',':'mem_mb=' + str(mem) + ',', 
                 'time_min=' + str(default_numbers[2]) +  ']':'time_min=' + str(time) + ']'}
