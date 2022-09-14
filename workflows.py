@@ -204,13 +204,13 @@ while True:
                 print("Snakemake software setup error, please contact: jordan_lawson@brown.edu")
                 break
             # Ask for inputs for configuring setup 
-            user_email=input("What is your Brown email address? ")
+            user_email=input("\nWhat is your Brown email address? ")
             new_mail="mail-user: " + user_email
             os.system("sed -i.bak 's/mail-user:.*/" + new_mail + "/g' " + snake_config)
             # Prompt user to specify HPC resources, if desired 
             default_resources=os.popen('grep "^default-resources:" ' + snake_config).read()
             default_resources=default_resources.split('[', 1)[1].split(']')[0]
-            print("Currently the Snakeflow default for HPC resources is: " + default_resources)
+            print("\nCurrently the Snakeflow default for HPC resources is: " + default_resources)
             hpc="empty"
             while True:
                 if hpc in ("yes", "no"):
