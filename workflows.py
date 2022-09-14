@@ -227,8 +227,8 @@ while True:
                         mem=input("How much memory (in GB) would you like? ")
                         mem=int(''.join(filter(str.isdigit, mem)))
                         mem=int(mem)*1000
-                        if mem < 1000 :
-                            print("Enter an integer greater than zero.") 
+                        if mem < 1000 or mem >= 200000:
+                            print("Enter an integer greater than zero and less than 200.") 
                         else: 
                             break 
                     except ValueError: 
@@ -247,8 +247,8 @@ while True:
                     try:
                         cpu_request=input("How many cores (i.e., cpus) would you like? ")
                         cpu_request=int(''.join(filter(str.isdigit, cpu_request)))
-                        if cpu_request < 1:
-                            print("Please enter an integer greater than zero.")
+                        if cpu_request < 1 or cpu_request >= 32:
+                            print("Please enter an integer greater than zero and less than 32.")
                         else: 
                             break 
                     except ValueError: 
@@ -256,11 +256,9 @@ while True:
                 default_numbers=default_resources.replace("=", " ")
                 default_numbers=default_numbers.replace(",", " ")
                 default_numbers=[int(s) for s in default_numbers.split() if s.isdigit()]
-                print(default_numbers)
-                replacements = {"[cpus=" + str(default_numbers[0]) + ",": '[cpus=' + str(cpu_request) + ',', 
+                replacements = {"cpus=" + str(default_numbers[0]) + ",": 'cpus=' + str(cpu_request) + ',', 
                 'mem_mb=' + str(default_numbers[1]) + ',':'mem_mb=' + str(mem) + ',', 
                 'time_min=' + str(default_numbers[2]) +  ']':'time_min=' + str(time) + ']'}
-                print(replacements)
                 for i in replacements.keys():
                     replacetext(i, replacements[i], snake_config)
                 # Print output messaging for user 
