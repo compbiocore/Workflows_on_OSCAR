@@ -9,14 +9,14 @@ To set up Nextflow and Snakemake for OSCAR, just `git clone` this repo into your
 
 Typing the above command will walk the user through a user-friendly guide to setting up and configuring Nextflow and Snakemake to run on OSCAR according to the user's computing needs. 
 
-## 1. Configuring and running Nextflow 
+# Nextflow 
 
-When launched, the CLI tool will prompt the user to type the name of the software they wish to install and set up.  Just enter `Nextflow` and you will be guided through the rest of the installation process. 
+When launched, the CLI tool will prompt the user to type the name of the software they wish to install and set up.  Just enter `Nextflow` and you will be guided through the rest of the installation and configuration process. During this process, the guide will prompt you to answer a few simple questions, after which the software handles the majority of the configuration details for you. 
 
 Once the installation and configuration process is done, users can run nextflow pipelines using their own custom workflows, workflows from github repos, 
 or workflows from nf-core. The use of singularity containers is automatically enabled and users can flexibly incorporate different containers into their workflow pipelines. 
 
-#### Important Nextflow commands
+## Important Nextflow commands
 
 a.) To be able to run Nextflow commands, first type: `nextflow_start` 
 
@@ -24,13 +24,13 @@ This command enters you into an environment where you can run Nextflow. To exit 
 
 NOTE: you can use the `nextflow_start` command in an interactive session on OSCAR (via `interact`) or in an sbatch script by putting the `nextflow_start` command before any `nextflow run` commands in the script. 
 
-b.) To uninstall (delete) Nextflow, type: `nextflow_remove`
+b.) To uninstall (delete) Nextflow and all its commands, type: `nextflow_remove`
 
-## 2. Configuring and running Snakemake
+# Snakemake
 
-When launched, the CLI tool will prompt the user to type the name of the software they wish to install and set up.  Just enter `Snakemake` and you will be guided through the rest of othe instllation process. 
+When prompted by the CLI tool to type the name of the software you wish to install and set up, just enter `Snakemake` and you will be guided through the rest of the installation and configuration process. During this process, the guide will prompt you to answer a few simple questions, after which the software handles the majority of the configuration details for you.
 
-Once the installation and configuration process is done, users can run snakemake pipelines using their own custom workflows or workflows elsewhere (such as GitHub) via snakefiles. The use of singularity is automatically enabled and users can flexibly incorporate different containers into their workflow pipelines via .sif files. 
+Once the installation and configuration process is done, users can run snakemake pipelines using their own custom workflows or workflows from elsewhere (such as GitHub) via snakefiles. The use of singularity is automatically enabled and users can flexibly incorporate different containers into their workflow pipelines via .sif files. 
 
 #### Important Snakemake commands
 
@@ -40,4 +40,4 @@ This command enters you into an environment where you can run Snakemake. Like wi
 
 NOTE: you can use the `snakemake_start` command in an interactive session on OSCAR (via `interact`) or in an sbatch script by putting the `snakemake_start` command before any `snakemake` commands in the script. 
 
-b.) To uninstall (delete) Snakemake, type: `snakemake_remove`
+b.) To uninstall (delete) Snakemake and all its commands, type: `snakemake_remove`
