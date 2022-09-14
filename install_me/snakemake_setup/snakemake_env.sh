@@ -1,0 +1,27 @@
+#!/bin/bash
+
+env_var_snake="snakemake_env_${USER}"
+cd $HOME
+if [ ! -d "$HOME/$env_var_snake" ]; then
+    echo "Setting up and installing Snakemake.." 
+    # Create virutal environment for user 
+    virtualenv $env_var_snake
+    source $HOME/$env_var_snake/bin/activate 
+    pip3 install snakemake
+    mkdir -p ~/.config/snakemake
+    mkdir -p ~/snakemake_folders/snake_error_log
+    mkdir -p ~/snakemake_folders/snake_output
+    mkdir -p ~/snakemake_folders/singularities
+    cp -r ~/snakemake_setup/oscar ~/.config/snakemake/oscar
+    deactivate
+    echo "Snakemake software installed, initializing configuration..." 
+else 
+    echo "Snakemake software detected, initializing configuration..."
+fi 
+
+# change .bashrc and source aliases to make it more user-friendly 
+if [ ! -f "$HOME/.snakemake_specific_aliases" ]; then touch ~/.snakemake_specific_aliases; fi 
+echo 'alias snakemake_start="source ~/snakemake_env_${USER}/bin/activate"' >> $HOME/.snakemake_specific_aliases 
+echo 'alias snakemake="~/.local/bin/snakemake"' >> $HOME/.snakemake_specific_aliases 
+echo 'alias snakemake_remove="rm -rf ~/snakemake_env_${USER} ~/snakemake_setup ~/.snakemake_specific_aliases ~/.config/snakemake ~/snakemake_folders ; pip3 uninstall snakemake"' >> $HOME/.snakemake_specific_aliases 
+grep -qxF 'if [ -e $HOME/.snakemake_specific_aliases ]; then source $HOME/.snakemake_specific_aliases; fi' ~/.bashrc || echo 'if [ -e $HOME/.snakemake_specific_aliases ]; then source $HOME/.snakemake_specific_aliases; fi' >> ~/.bashrc
