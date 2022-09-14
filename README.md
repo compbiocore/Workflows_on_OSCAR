@@ -36,8 +36,8 @@ Once the installation and configuration process is done, users can run snakemake
 
 a.) To be able to run Snakemake commands, first type: `snakemake_start` 
 
-This command enters you into an environment where you can run Snakemake. Like with Nextflow, to exit out of this workflow session, just type `quit_workflow`. 
+  - This command enters you into an environment where you can run Snakemake. Like with Nextflow, to exit out of this workflow session, just type `quit_workflow`. 
 
-**NOTE:** you can use the `snakemake_start` command in an interactive session on OSCAR (via `interact`) or in an sbatch script by putting the `snakemake_start` command before any `snakemake` commands in the script. 
+  - **NOTE:** you can use the `snakemake_start` command in an interactive session on OSCAR (via `interact`) or in an sbatch script by putting the `snakemake_start` command before any `snakemake` commands in the script. 
 
 b.) To uninstall (delete) Snakemake and all its commands, type: `snakemake_remove`
