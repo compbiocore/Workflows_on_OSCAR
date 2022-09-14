@@ -3,13 +3,15 @@
 This repo tracks the development of a user-friendly CLI tool for installing and configuring Nextflow and Snakemake workflow management tools on Brown's HPC 
 cluster, OSCAR, so that users can easily and efficiently deploy reproducible, scalable pipelines for compute intensive tasks. 
 
-To set up Nextflow and Snakemake for OSCAR, just `git clone` this repo into your `HOME` directory on OSCAR. Once this is done, copy and paste the following command into your terminal: 
+**Note:** This tool is currently still in beta and being tested. If there are any issues or bugs, please report to: [jordan_lawson@brown.edu](mailto:jordan_lawson@brown.edu) 
+
+# Running the Installer
+
+To set up Nextflow and/or Snakemake for OSCAR, just `git clone` this repo into your `HOME` directory on OSCAR. Once this is done, copy and paste the following command into your terminal: 
 
 ```bash ~/workflows_on_OSCAR/install_me/install.sh && source ~/.bashrc```
 
 Running the above command in your terminal will initiate the installation and configuration process, walking the user through a user-friendly guide to setting up and configuring Nextflow and Snakemake to run on OSCAR according to the user's computing needs. 
-
-**Note:** This tool is currently still in beta and being tested. If there are any issues or bugs, please report to: [jordan_lawson@brown.edu](mailto:jordan_lawson@brown.edu) 
 
 # Nextflow 
 
