@@ -11,12 +11,12 @@ Typing the above command will walk the user through a user-friendly guide to set
 
 ## 1. Configuring and running Nextflow 
 
-When launched, the CLI tool will prompt the user to type the name of the software they wish to install and set up.  Just enter `Nextflow` and you will be guided through the rest. 
+When launched, the CLI tool will prompt the user to type the name of the software they wish to install and set up.  Just enter `Nextflow` and you will be guided through the rest of the installation process. 
 
 Once the installation and configuration process is done, users can run nextflow pipelines using their own custom workflows, workflows from github repos, 
 or workflows from nf-core. The use of singularity containers is automatically enabled and users can flexibly incorporate different containers into their workflow pipelines. 
 
-### Important Nextflow commands
+#### Important Nextflow commands
 
 a.) To be able to run Nextflow commands, first type: `nextflow_start` 
 
@@ -28,11 +28,11 @@ b.) To uninstall (delete) Nextflow, type: `nextflow_remove`
 
 ## 2. Configuring and running Snakemake
 
-When launched, the CLI tool will prompt the user to type the name of the software they wish to install and set up.  Just enter `Snakemake` and you will be guided through the rest. 
+When launched, the CLI tool will prompt the user to type the name of the software they wish to install and set up.  Just enter `Snakemake` and you will be guided through the rest of othe instllation process. 
 
 Once the installation and configuration process is done, users can run snakemake pipelines using their own custom workflows or workflows elsewhere (such as GitHub) via snakefiles. The use of singularity is automatically enabled and users can flexibly incorporate different containers into their workflow pipelines via .sif files. 
 
-### Important Snakemake commands
+#### Important Snakemake commands
 
 a.) To be able to run Snakemake commands, first type: `snakemake_start` 
 
