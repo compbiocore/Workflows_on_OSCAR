@@ -23,5 +23,5 @@ fi
 if [ ! -f "$HOME/.snakemake_specific_aliases" ]; then touch ~/.snakemake_specific_aliases; fi 
 echo 'alias snakemake_start="source ~/snakemake_env_${USER}/bin/activate"' >> $HOME/.snakemake_specific_aliases 
 echo 'alias snakemake="~/.local/bin/snakemake"' >> $HOME/.snakemake_specific_aliases 
-echo 'alias snakemake_remove="rm -rf ~/snakemake_env_${USER} ~/snakemake_setup ~/.snakemake_specific_aliases ~/.config/snakemake ~/snakemake_folders ; pip3 uninstall snakemake"' >> $HOME/.snakemake_specific_aliases 
+echo 'alias snakemake_remove="rm -rf ~/snakemake_env_${USER} ~/snakemake_setup ~/.snakemake_specific_aliases ~/.config/snakemake ~/snakemake_folders"' >> $HOME/.snakemake_specific_aliases 
 grep -qxF 'if [ -e $HOME/.snakemake_specific_aliases ]; then source $HOME/.snakemake_specific_aliases; fi' ~/.bashrc || echo 'if [ -e $HOME/.snakemake_specific_aliases ]; then source $HOME/.snakemake_specific_aliases; fi' >> ~/.bashrc
