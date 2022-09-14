@@ -1,6 +1,5 @@
 #!/bin/bash
 
-cp -r ~/workflows_on_OSCAR/install_me/nextflow_setup ~/nextflow_setup
 env_var="nextflow_env_${USER}"
 cd $HOME
 if [ ! -d "$HOME/$env_var" ]; then
