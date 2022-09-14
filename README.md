@@ -19,8 +19,8 @@ or workflows from nf-core. The use of singularity containers is automatically en
 ### Important Nextflow commands
 
 - `nextflow_start` makes it so you're able to run Nextflow commands 
-   - **NOTE:** The above command enters you into an environment where you can run Nextflow commands. You can use the `nextflow_start` command in an interactive session on OSCAR (via `interact`) or in your sbatch script by putting it before any `nextflow run` commands you use in the script. 
-- `quit_workflow` exits you out of the Nextflow working session you entered into. If you run this, you will be taken out of your session and unable to run any Nextflow commands until you run `nextflow_start` again. Note that you do not need to put this command in your sbatch scripts.
+   - **Note:** The above command enters you into an environment where you can run Nextflow commands. You can use the nextflow_start command in an interactive session on OSCAR (via `interact`) or in your sbatch script by putting it before any nextflow commands you use in the script. 
+- `quit_workflow` exits you out of the Nextflow working session you entered into. If you run this, you will be taken out of your session and unable to run any Nextflow commands until you run nextflow_start again. Note that you do not need to put this command in your sbatch scripts.
 - `nextflow_remove` uninstalls (deletes) Nextflow and all its commands (i.e., `nextflow_start`, `nextflow run`, `nextflow_remove`) 
 
 # Snakemake
@@ -32,6 +32,6 @@ Once the installation and configuration process is done, users can run snakemake
 ### Important Snakemake commands
 
 - `snakemake_start` makes it so you're able to run Snakemake commands 
-   - **NOTE:** The above command enters you into an environment where you can run Snakemake commands. You can use the `snakemake_start` command in an interactive session on OSCAR (via `interact`) or in your sbatch script by putting it before any `snakemake` commands you use in the script. 
-- `quit_workflow` exits you out of the Snakemake working session you entered into. If you run this, you will be taken out of your session and unable to run any Snakemake commands until you run `snakemake_start` again. Note that you do not need to put this command in your sbatch scripts.
+   - **Note:** The above command enters you into an environment where you can run Snakemake commands. You can use the snakemake_start command in an interactive session on OSCAR (via `interact`) or in your sbatch script by putting it before any snakemake commands you use in the script. 
+- `quit_workflow` exits you out of the Snakemake working session you entered into. If you run this, you will be taken out of your session and unable to run any Snakemake commands until you run snakemake_start again. Note that you do not need to put this command in your sbatch scripts.
 - `snakemake_remove` uninstalls (deletes) Snakemake and all its commands (i.e., `snakemake_start`, `snakemake`, `snakemake_remove`) 
