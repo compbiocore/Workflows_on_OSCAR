@@ -18,10 +18,10 @@ or workflows from nf-core. The use of singularity containers is automatically en
 
 ### Important Nextflow commands
 
-a.) To be able to run Nextflow commands, first type: `nextflow_start` 
+- a.) To be able to run Nextflow commands, first type: `nextflow_start` 
    - **NOTE:** The above command enters you into an environment where you can run Nextflow. You can use the `nextflow_start` command in an interactive session on OSCAR (via `interact`) or in your sbatch script by putting it before any `nextflow run` commands you use in the script. 
-b.) To exit out of the Nextflow workflow session, just type `quit_workflow`. If you run this, you will b etaken out of your session and unable to run Nextflow commands. You do not need to put this in your sbatch scripts, if using Nextflow that way. 
-c.) To uninstall (delete) Nextflow and all its commands, type: `nextflow_remove`
+- b.) To exit out of the Nextflow workflow session, just type `quit_workflow`. If you run this, you will b etaken out of your session and unable to run Nextflow commands. You do not need to put this in your sbatch scripts, if using Nextflow that way. 
+- c.) To uninstall (delete) Nextflow and all its commands, type: `nextflow_remove`
 
 # Snakemake
 
@@ -31,7 +31,7 @@ Once the installation and configuration process is done, users can run snakemake
 
 ### Important Snakemake commands
 
-a.) To be able to run Snakemake commands, first type: `snakemake_start` 
+- a.) To be able to run Snakemake commands, first type: `snakemake_start` 
    - **NOTE:** The above command enters you into an environment where you can run Snakemake. You can use the `snakemake_start` command in an interactive session on OSCAR (via `interact`) or in your sbatch script by putting it before any `snakemake` commands you use in the script. 
-b.) Like with Nextflow, to exit out of the Snakemake workflow session, you just type `quit_workflow`. If you run this, you will be taken out of your session and unable to run Snakemake commands. You do not need to put this in your sbatch scripts, if using Snakemake that in this manner. 
-c.) To uninstall (delete) Snakemake and all its commands, type: `snakemake_remove`
+- b.) Like with Nextflow, to exit out of the Snakemake workflow session, you just type `quit_workflow`. If you run this, you will be taken out of your session and unable to run Snakemake commands. You do not need to put this in your sbatch scripts, if using Snakemake that in this manner. 
+- c.) To uninstall (delete) Snakemake and all its commands, type: `snakemake_remove`
