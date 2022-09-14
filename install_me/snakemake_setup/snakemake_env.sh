@@ -4,12 +4,13 @@ env_var_snake="snakemake_env_${USER}"
 cd $HOME
 if [ ! -d "$HOME/$env_var_snake" ]; then
     echo "Setting up and installing Snakemake.." 
-    git clone https://bitbucket.org/snakemake/snakemake.git
-    cd snakemake
+    #git clone https://bitbucket.org/snakemake/snakemake.git
+    #cd snakemake
     # Create virutal environment for user 
     virtualenv $env_var_snake
     source $HOME/$env_var_snake/bin/activate 
-    python3 setup.py install
+    #python3 setup.py install
+    pip3 install snakemake
     mkdir -p ~/.config/snakemake
     mkdir -p ~/snakemake_folders/snake_error_log
     mkdir -p ~/snakemake_folders/snake_output
