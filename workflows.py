@@ -163,7 +163,7 @@ while True:
                 """
                 print(instructions)
                 print("\nPlease see https://github.com/compbiocore/workflows_on_OSCAR for further details on how to add the above label options to your workflow.\n")
-                print("Note the setup is designed such that pipelines downloaded from nf-core with their own resource specs within the .nf script will override your defaults\n")
+                print("Note the setup is designed such that pipelines downloaded from nf-core with their own resource specs within the .nf script will override your defaults.\n")
                 next_dir=homedir + "/nextflow_env_" + username + "/bin/activate"
                 print("To run Nextflow pipelines, first type nextflow_start into either the command line or in an sbatch script. \n")
             if hpc=="no":
@@ -189,7 +189,7 @@ while True:
                 """
                 print(instructions)
                 print("\nPlease see https://github.com/compbiocore/workflows_on_OSCAR for further details on how to add the above label options to your workflow.\n")
-                print("Note the setup is designed such that pipelines downloaded from nf-core with their own resource specs within the .nf script will override your defaults\n")
+                print("Note the setup is designed such that pipelines downloaded from nf-core with their own resource specs within the .nf script will override your defaults.\n")
                 next_dir=homedir + "/nextflow_env_" + username + "/bin/activate"
                 print("To run Nextflow pipelines, first type nextflow_start into either the command line or in an sbatch script. \n")
             break
@@ -273,7 +273,7 @@ while True:
                 print_1=print_1.split('[', 1)[1].split(']')[0]
                 print("\nYour default resources for Snakemake are: " + print_1 + "\n")
                 print("\nPlease see https://github.com/compbiocore/workflows_on_OSCAR for further details on how to configure and run your Snakemake workflows.\n")
-                print("Note that the setup is designed such that snakefiles can specify tasks with their own resource specs that override the defaults\n")
+                print("Note that the setup is designed such that snakefiles can specify tasks with their own resource specs that override the defaults.\n")
                 print("To run Snakemake pipelines, first type snakemake_start into either the command line or in an sbatch script. \n")
             if hpc=="no":
                 # Print output messaging for user 
@@ -289,7 +289,7 @@ while True:
                 print_1=print_1.split('[', 1)[1].split(']')[0]
                 print("\nYour default resources for Snakemake are: " + print_1 + "\n")
                 print("\nPlease see https://github.com/compbiocore/workflows_on_OSCAR for further details on how to configure and run your Snakemake workflows.\n")
-                print("Note that the setup is designed such that snakefiles can specify tasks with their own resource specs that override the defaults\n")
+                print("Note that the setup is designed such that snakefiles can specify tasks with their own resource specs that override the defaults.\n")
                 print("To run Snakemake pipelines, first type snakemake_start into either the command line or in an sbatch script. \n")
             break
     else: 
