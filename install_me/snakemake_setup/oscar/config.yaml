@@ -3,7 +3,7 @@ cluster: "sbatch --time={resources.time_min} --mem={resources.mem_mb}
           -c {resources.cpus} -o ${HOME}/snakemake_folders/snake_output/{rule}_{wildcards}
           -e ${HOME}/snakemake_folders/snake_error_log/{rule}_{wildcards}"
 jobs: 25
-default-resources: [cpus=1, mem_mb=1000, time_min=30]
+default-resources: [cpus=1, mem_mb=2000, time_min=30]
 resources: [cpus=32, mem_mb=200000]
 # singularity
 use-singularity: True
