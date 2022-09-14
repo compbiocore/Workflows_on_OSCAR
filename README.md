@@ -32,7 +32,7 @@ When prompted by the CLI tool to type the name of the software you wish to insta
 
 Once the installation and configuration process is done, users can run snakemake pipelines using their own custom workflows or workflows from elsewhere (such as GitHub) via snakefiles. The use of singularity is automatically enabled and users can flexibly incorporate different containers into their workflow pipelines via .sif files. 
 
-#### Important Snakemake commands
+### Important Snakemake commands
 
 a.) To be able to run Snakemake commands, first type: `snakemake_start` 
 
