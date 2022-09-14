@@ -28,6 +28,15 @@ or workflows from nf-core. The use of singularity containers is automatically en
 - `quit_workflow` exits you out of the Nextflow working session you entered into. If you run this, you will be taken out of your session and unable to run any Nextflow commands until you run `nextflow_start` again. Note that you do not put this command in your sbatch scripts.
 - `nextflow_remove` uninstalls (deletes) Nextflow and all its commands (i.e., `nextflow_start`, `nextflow run`, `nextflow_remove`) 
 
+### Nextflow Template Script (to help you easily run Nextflow pipelines on OSCAR)
+
+Once Nextflow has been successfully installed and configured on OSCAR, you will find a script called `nextflow_template_script.sh` in the `~/nextflow_setup` directory on OSCAR. This is a template script that you can easily edit and use to run Nextflow pipelines on OSCAR using `sbatch`. To do so, first copy this file to your project directory (or to any other directory you need it) and rename the file. A general example of how to do this would be: 
+```cp ~/nextflow_setup/nextflow_template_script.sh /directory/of/your/choosing/nextflow_run.sh```
+
+The above command creates a new script called `nextflow_run.sh`. Once this is done, you can open and edit the copied file using a text editor of your choice (such as `vim`). When you are done editing, exit and save and then run the file using `sbatch`. This will run your Nextflow pipeline. Inside the `nextflow_template_script.sh` file you will find detailed instructions and notes helping you to setup and run the file. Please read and follow these. 
+
+outside the just open and edit this file using a text editor of your choice (such as `vim`). Once it is edited to your needs, save it under a new name (as a new .sh file 
+
 # Snakemake
 
 When prompted by the CLI tool to type the name of the software you wish to install and set up, just enter `Snakemake` and you will be guided through the rest of the installation and configuration process. During this process, the guide will prompt you to answer a few simple questions, after which the software handles the majority of the configuration details for you.
