@@ -30,7 +30,7 @@ or workflows from nf-core. The use of singularity containers is automatically en
 
 ### Nextflow Template Script for OSCAR
 
-Once Nextflow has been successfully installed and configured on OSCAR, you will find a script called `nextflow_template_script.sh` in the `~/nextflow_setup` directory on OSCAR. This is a template script that you can easily edit and use to run Nextflow pipelines on OSCAR using `sbatch`. To do so, first copy this file to your project directory (or to any other directory you need it) and rename the file. A general example of how to do this would be: 
+Once Nextflow has been successfully installed and configured on OSCAR, you will find a script called `nextflow_template_script.sh` in the `~/nextflow_setup` directory on OSCAR. This is a template script that you can easily edit and use to run Nextflow pipelines on OSCAR using the `sbatch` command. To do so, first copy this file to your project directory (or to any other directory you need it) and rename the file. A general example of how to do this would be: 
 ```cp ~/nextflow_setup/nextflow_template_script.sh /directory/of/your/choosing/nextflow_run.sh```
 
 The above command creates a new script called `nextflow_run.sh`. Once this is done, you can open and edit the copied file using a text editor of your choice (such as `vim`). When you are done editing, exit and save and then run the file using `sbatch`. This will run your Nextflow pipeline. Inside the `nextflow_template_script.sh` file you will find detailed instructions and notes helping you to setup and run the file. Please read and follow these. 
