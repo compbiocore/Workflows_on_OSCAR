@@ -72,7 +72,7 @@ while True:
         if program=="nextflow":
             # Set up environment, if it doesnt exist 
             try: 
-                bash_file='bash ' + homedir + '/nextflow_setup/nextflow_env.sh'
+                bash_file='bash -i' + homedir + '/nextflow_setup/nextflow_env.sh'
                 call(shlex.split(bash_file)) 
             except OSError:
                 print("Software setup error, please contact: jordan_lawson@brown.edu")
