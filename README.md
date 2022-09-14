@@ -20,7 +20,9 @@ or workflows from nf-core. The use of singularity containers is automatically en
 
 a.) To be able to run Nextflow commands, first type: `nextflow_start` 
 
-NOTE: you can use the above `nextflow_start` command in an interactive session on OSCAR (via `interact`) or in an sbatch script by putting the `nextflow_start` command before any `nextflow run` commands in the script. 
+This command creates an environment where you can run Nextflow. To exit out of this workflow session, just type `quit_workflow`. 
+
+NOTE: you can use the `nextflow_start` command in an interactive session on OSCAR (via `interact`) or in an sbatch script by putting the `nextflow_start` command before any `nextflow run` commands in the script. 
 
 b.) To uninstall (delete) Nextflow, type: `nextflow_remove`
 
@@ -34,6 +36,8 @@ Once the installation and configuration process is done, users can run snakemake
 
 a.) To be able to run Snakemake commands, first type: `snakemake_start` 
 
-NOTE: you can use the above `snakemake_start` command in an interactive session on OSCAR (via `interact`) or in an sbatch script by putting the `snakemake_start` command before any `snakemake` commands in the script. 
+This command creates an environment where you can run Snakemake. Like with Nextflow, to exit out of this workflow session, just type `quit_workflow`. 
+
+NOTE: you can use the `snakemake_start` command in an interactive session on OSCAR (via `interact`) or in an sbatch script by putting the `snakemake_start` command before any `snakemake` commands in the script. 
 
 b.) To uninstall (delete) Snakemake, type: `snakemake_remove`
