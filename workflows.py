@@ -226,10 +226,10 @@ while True:
                     try:
                         mem=input("How much memory (in GB) would you like? ")
                         mem=int(''.join(filter(str.isdigit, mem)))
-                        if mem < 1 :
+                        mem=int(mem)*1000
+                        if mem < 1000 :
                             print("Enter an integer greater than zero.") 
                         else: 
-                            mem=mem*1000
                             break 
                     except ValueError: 
                         print("Invalid entry, please give a number.")
