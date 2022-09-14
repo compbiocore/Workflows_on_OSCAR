@@ -201,10 +201,10 @@ while True:
             except OSError:
                 print("Snakemake software setup error, please contact: jordan_lawson@brown.edu")
                 break
-            # Ask for inputs for scm file so that Nextflow has github access 
+            # Ask for inputs for configuring setup 
             user_email=input("What is your Brown email address? ")
             new_mail="mail-user: " + user_email
-            os.system("sed -i.bak 's/mail-user:.*/$new_mail/g' " + snake_config)
+            os.system("sed -i.bak 's/mail-user:.*/" + new_mail + '/g ' + snake_config)
             # Prompt user to specify HPC resources, if desired 
             default_resources=os.popen('grep "^default-resources:" ' + snake_config).read()
             default_resources=default_resources.split('[', 1)[1].split(']')[0]
