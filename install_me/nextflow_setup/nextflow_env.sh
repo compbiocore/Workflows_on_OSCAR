@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/bin/bash
 
 env_var="nextflow_env_${USER}"
 cd $HOME
@@ -22,4 +22,4 @@ if [ ! -f "$HOME/.nextflow_specific_aliases" ]; then touch ~/.nextflow_specific_
 echo 'alias nextflow_start="source ~/nextflow_env_${USER}/bin/activate"' >> $HOME/.nextflow_specific_aliases 
 echo 'alias nextflow_remove="rm -rf ~/nextflow_env_${USER} ~/nextflow_setup ~/.nextflow_specific_aliases"' >> $HOME/.nextflow_specific_aliases 
 grep -qxF 'if [ -e $HOME/.nextflow_specific_aliases ]; then source $HOME/.nextflow_specific_aliases; fi' ~/.bashrc || echo 'if [ -e $HOME/.nextflow_specific_aliases ]; then source $HOME/.nextflow_specific_aliases; fi' >> ~/.bashrc
-source ~/.bashrc
+echo "source ~/.bashrc" 
