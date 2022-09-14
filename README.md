@@ -16,7 +16,7 @@ When launched, the CLI tool will prompt the user to type the name of the softwar
 Once the installation and configuration process is done, users can run nextflow pipelines using their own custom workflows, workflows from github repos, 
 or workflows from nf-core. The use of singularity containers is automatically enabled and users can flexibly incorporate different containers into their workflow pipelines. 
 
-### Important commands
+### Important Nextflow commands
 
 a.) To be able to run Nextflow commands, first type: `nextflow_start` 
 
