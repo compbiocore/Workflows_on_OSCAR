@@ -34,7 +34,7 @@ Once Nextflow has been successfully installed and configured on OSCAR, you will 
 
 ```cp ~/nextflow_setup/nextflow_template_script.sh /directory/of/your/choosing/nextflow_run.sh```
 
-The above command creates a new script called `nextflow_run.sh` that is directly copied from the template script. Once this is done, you can open and edit the newly copied file using a text editor of your choice (such as `vim`). When you are done editing, exit and save and then run the file using `sbatch`. This will run your Nextflow pipeline. Inside the `nextflow_template_script.sh` file you will find detailed instructions and notes helping you to setup and run the file. Please read and follow these. 
+The above command creates a new script called `nextflow_run.sh` that is directly copied from the template script. Once this is done, you can open and edit the newly copied file using a text editor of your choice (such as `vim`). When you are done editing, exit and save and then run the file using the `sbatch` command. This will run your Nextflow pipeline. Inside the `nextflow_template_script.sh` file you will find detailed instructions and notes helping you to setup and run the file. Please read and follow these. 
 
 outside the just open and edit this file using a text editor of your choice (such as `vim`). Once it is edited to your needs, save it under a new name (as a new .sh file 
 
