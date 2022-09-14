@@ -5,7 +5,7 @@ cluster, OSCAR, so that users can easily and efficiently deploy reproducible, sc
 
 **Note:** This tool is currently still in beta and being tested. If there are any issues or bugs, please report to: [jordan_lawson@brown.edu](mailto:jordan_lawson@brown.edu) 
 
-# Running the Installer
+## Running the Installer
 
 To set up Nextflow and/or Snakemake for OSCAR, just `git clone` this repo into your `HOME` directory on OSCAR. Once this is done, copy and paste the following command into your terminal: 
 
