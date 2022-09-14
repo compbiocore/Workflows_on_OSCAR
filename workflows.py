@@ -260,6 +260,7 @@ while True:
                 replacements = {"[cpus=" + str(default_numbers[0]) + ",": '[cpus=' + str(cpu_request) + ',', 
                 'mem_mb=' + str(default_numbers[1]) + ',':'mem_mb=' + str(mem) + ',', 
                 'time_min=' + str(default_numbers[2]) +  ']':'time_min=' + str(time) + ']'}
+                print(replacements)
                 for i in replacements.keys():
                     replacetext(i, replacements[i], snake_config)
                 # Print output messaging for user 
