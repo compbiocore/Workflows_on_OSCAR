@@ -264,9 +264,9 @@ while True:
                 # Print output messaging for user 
                 print("\nOUTPUT MESSAGE:")
                 header="""
-                *********************************************************************
-                 ~Snakemake~ is now set up and configured and ready to run on OSCAR!
-                *********************************************************************
+                ***********************************************************************
+                 ~~Snakemake~~ is now set up and configured and ready to run on OSCAR!
+                ***********************************************************************
                 """
                 print(header)
                 print_1=os.popen('grep "^default-resources:" ' + snake_config).read()
@@ -280,9 +280,9 @@ while True:
                 print("Keeping defaults!")
                 print("\nOUTPUT MESSAGE:")
                 header="""
-                *********************************************************************
-                 ~Snakemake~ is now set up and configured and ready to run on OSCAR!
-                *********************************************************************
+                ***********************************************************************
+                 ~~Snakemake~~ is now set up and configured and ready to run on OSCAR!
+                ***********************************************************************
                 """
                 print(header)
                 print_1=os.popen('grep "^default-resources:" ' + snake_config).read()
