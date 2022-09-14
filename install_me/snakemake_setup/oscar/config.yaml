@@ -1,4 +1,7 @@
 jobname: "{rule}.{jobid}"
+global_options:
+    mail-type: 'ALL'
+    mail-user: 'user@brown.edu'
 cluster: "sbatch --time={resources.time_min} --mem={resources.mem_mb}
           -c {resources.cpus} -o ${HOME}/snakemake_folders/snake_output/{rule}_{wildcards}
           -e ${HOME}/snakemake_folders/snake_error_log/{rule}_{wildcards}"

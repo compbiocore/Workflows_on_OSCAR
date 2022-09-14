@@ -20,9 +20,9 @@ import re
 # At the moment, only Nextflow is supported; however, Snakemake will be added soon. 
 
 # Create a function to replace text in config file that gets used in main while loop 
-def replacetext(search_text,replace_text):
+def replacetext(search_text,replace_text, file_changing):
     # Opening the file in read and write mode
-    with open(next_config,'r+') as f:
+    with open(file_changing,'r+') as f:
         # Reading the file data and store it in a file variable
         file = f.read()
         # Replacing the pattern with the string in the file data
@@ -59,7 +59,8 @@ print("\nWelcome to a program designed to help you easily set up and run workflo
 # get home directory and username information for use later 
 homedir = os.path.expanduser("~")
 username = getuser()
-next_config=homedir + '/nextflow_setup/nextflow.config'
+next_config=homedir + '/nextflow_setup/nextflow.config' 
+snake_config=homedir + '/.config/snakemake/oscar/config.yaml'
 
 # Main while loop 
 while True: 
@@ -69,13 +70,14 @@ while True:
     program=program.strip()
     # If Nextflow, we first make sure we have set up the environment so that user can run Nextflow on OSCAR 
     if program in ("nextflow", "snakemake"):
+        # Nextflow software 
         if program=="nextflow":
             # Set up environment, if it doesnt exist 
             try: 
                 bash_file='bash ' + homedir + '/nextflow_setup/nextflow_env.sh'
                 call(shlex.split(bash_file)) 
             except OSError:
-                print("Software setup error, please contact: jordan_lawson@brown.edu")
+                print("Nextflow software setup error, please contact: jordan_lawson@brown.edu")
                 break
             # Ask for inputs for scm file so that Nextflow has github access 
             git_user=input("What is your GitHub user name? ")
@@ -138,7 +140,7 @@ while True:
                 'time = ' + str(default_numbers[1]) + '.h  //default time':'time = ' + str(time) + '.h  //default time', 
                 'cpus = ' + str(default_numbers[2]) +  '  //default cpus':'cpus = ' + str(cpu_request) + '  //default cpus'}
                 for i in replacements.keys():
-                    replacetext(i, replacements[i])
+                    replacetext(i, replacements[i], next_config)
                 # Move nextflow.config file to .nextflow folder so it is a software default 
                 os.system('cp ' + next_config + ' $HOME/.nextflow/config')
                 # Print output messaging for user 
@@ -190,8 +192,103 @@ while True:
                 next_dir=homedir + "/nextflow_env_" + username + "/bin/activate"
                 print("To run Nextflow pipelines, first type nextflow_start into either the command line or in an sbatch script. \n")
             break
+        # Snakemake software 
         if program=="snakemake":
-            print("Snakemake is not yet supported, but it is coming soon!")
+            # Set up environment, if it doesnt exist 
+            try: 
+                bash_file='bash ' + homedir + '/snakemake_setup/snakemake_env.sh'
+                call(shlex.split(bash_file)) 
+            except OSError:
+                print("Snakemake software setup error, please contact: jordan_lawson@brown.edu")
+                break
+            # Ask for inputs for scm file so that Nextflow has github access 
+            user_email=input("What is your Brown email address? ")
+            new_mail="mail-user: " + user_email
+            os.system("sed -i.bak 's/mail-user:.*/$new_mail/g' " + snake_config)
+            # Prompt user to specify HPC resources, if desired 
+            default_resources=os.popen('grep "^default-resources:" ' + snake_config).read()
+            default_resources=default_resources.split('[', 1)[1].split(']')[0]
+            print("Currently the Snakeflow default for HPC resources is: " + default_resources)
+            hpc="empty"
+            while True:
+                if hpc in ("yes", "no"):
+                    break
+                else:
+                    hpc=input("Do you want to change these default resources for your Snakemake pipeline [Yes or No]? ")
+                    hpc=hpc.lower()
+                    hpc=hpc.strip()
+                    if hpc not in ("yes", "no"):
+                        print("Please enter either Yes or No.")
+            if hpc=="yes": 
+                while True: 
+                    try:
+                        mem=input("How much memory (in GB) would you like? ")
+                        mem=int(''.join(filter(str.isdigit, mem)))
+                        if mem < 1 :
+                            print("Enter an integer greater than zero.") 
+                        else: 
+                            mem=mem*1000
+                            break 
+                    except ValueError: 
+                        print("Invalid entry, please give a number.")
+                while True: 
+                    try:
+                        time=input("How much time (in minutes, with 5 being the minimum) would you like? ")
+                        time=int(''.join(filter(str.isdigit, time)))
+                        if time < 5: 
+                            print("Please enter an integer equal to or greater than 5.")
+                        else:
+                            break 
+                    except ValueError: 
+                        print("Invalid entry, please give a number.")
+                while True: 
+                    try:
+                        cpu_request=input("How many cores (i.e., cpus) would you like? ")
+                        cpu_request=int(''.join(filter(str.isdigit, cpu_request)))
+                        if cpu_request < 1:
+                            print("Please enter an integer greater than zero.")
+                        else: 
+                            break 
+                    except ValueError: 
+                        print("Invalid entry, please give a number.")
+                default_numbers=default_resources.replace("=", " ")
+                default_numbers=default_numbers.replace(",", " ")
+                default_numbers=[int(s) for s in default_numbers.split() if s.isdigit()]
+                replacements = {"[cpus=" + str(default_numbers[0]) + ",": '[cpus=' + str(cpu_request) + ',', 
+                'mem_mb=' + str(default_numbers[1]) + ',':'mem_mb=' + str(mem) + ',', 
+                'time_min=' + str(default_numbers[2]) +  ']':'time_min=' + str(time) + ']'}
+                for i in replacements.keys():
+                    replacetext(i, replacements[i], snake_config)
+                # Print output messaging for user 
+                print("\nOUTPUT MESSAGE:")
+                header="""
+                *********************************************************************
+                 ~Snakemake~ is now set up and configured and ready to run on OSCAR!
+                *********************************************************************
+                """
+                print(header)
+                print_1=os.popen('grep "^default-resources:" ' + snake_config).read()
+                print_1=print_1.split('[', 1)[1].split(']')[0]
+                print("\nYour default resources for Snakemake are: " + print_1 + "\n")
+                print("\nPlease see https://github.com/compbiocore/workflows_on_OSCAR for further details on how to configure and run your Snakemake workflows.\n")
+                print("Note that the setup is designed such that snakefiles can specify tasks with their own resource specs that override the defaults\n")
+                print("To run Snakemake pipelines, first type snakemake_start into either the command line or in an sbatch script. \n")
+            if hpc=="no":
+                # Print output messaging for user 
+                print("Keeping defaults!")
+                print("\nOUTPUT MESSAGE:")
+                header="""
+                *********************************************************************
+                 ~Snakemake~ is now set up and configured and ready to run on OSCAR!
+                *********************************************************************
+                """
+                print(header)
+                print_1=os.popen('grep "^default-resources:" ' + snake_config).read()
+                print_1=print_1.split('[', 1)[1].split(']')[0]
+                print("\nYour default resources for Snakemake are: " + print_1 + "\n")
+                print("\nPlease see https://github.com/compbiocore/workflows_on_OSCAR for further details on how to configure and run your Snakemake workflows.\n")
+                print("Note that the setup is designed such that snakefiles can specify tasks with their own resource specs that override the defaults\n")
+                print("To run Snakemake pipelines, first type snakemake_start into either the command line or in an sbatch script. \n")
             break
     else: 
         print("Please re-enter a valid option.")
