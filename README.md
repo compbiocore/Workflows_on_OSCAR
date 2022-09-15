@@ -74,6 +74,6 @@ When Snakemake is installed and configured, it creates a folder called `snakemak
 A number of updates are forthcoming in order to make future iterations of this tool more user-friendly. Specifically, we hope to do the following: 
 
   - Allow users to easily specify where they want slurm and pipeline outputs to go via user prompts during installation process 
-  - Allow for Nextflow to submit jobs to gpu nodes for some tasks 
+  - Allow for Nextflow to submit jobs to gpu nodes for tasks that require it
   - Expand the tool so users do not have to edit the template scripts to run Nextflow and Snakemake pipelines
   - Possibly develop GUI and include this software on Brown's Open OnDemand web portal 
