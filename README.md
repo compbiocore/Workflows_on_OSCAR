@@ -10,7 +10,7 @@ To set up Nextflow and/or Snakemake for OSCAR, just `git clone` this repo into y
 
 ```bash ~/workflows_on_OSCAR/install_me/install.sh && source ~/.bashrc```
 
-Running the above command in your terminal will initiate the installation and configuration process, walking the user through a user-friendly guide to setting up and configuring Nextflow and Snakemake to run on OSCAR according to the user's computing needs. 
+Running the above command in your terminal will initiate the installation and configuration process, walking the user through a user-friendly guide to setting up and configuring Nextflow and Snakemake to run on OSCAR according to the user's computing needs. You can run the above bash command more than once if you wish to install both workflow management tools or just wish to reconfigure a workflow's HPC defaults to your liking. 
 
 # NEXTFLOW
 ![My Image](images/nextflow.png)
