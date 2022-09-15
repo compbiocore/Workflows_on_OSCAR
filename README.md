@@ -36,8 +36,6 @@ Once Nextflow has been successfully installed and configured on OSCAR, you will 
 
 The above command creates a new script called `nextflow_run.sh` that is directly copied from the template script. Once this is done, you can open and edit the newly copied file using a text editor of your choice (such as `vim`). When you are done editing, exit and save and then run the file using the `sbatch` command. This will run your Nextflow pipeline on OSCAR. Note that inside the `nextflow_template_script.sh` file you will find more detailed instructions and notes helping you to setup and run pipelines using the template file. Please read and follow these instructions. 
 
-outside the just open and edit this file using a text editor of your choice (such as `vim`). Once it is edited to your needs, save it under a new name (as a new .sh file 
-
 ### File Management using Nextflow
 
 The default configuration sets up Nextflow to use your `HOME` directory for both slurm logs and job output. Furthermore, singularity caching happens in your `scratch` directory. As a reminder, the `scratch` directory is not backed up and files that you do not access for 30 days may be deleted. 
