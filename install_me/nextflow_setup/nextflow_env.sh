@@ -1,8 +1,5 @@
 #!/bin/bash
 
-# Load modules required for nextflow 
-module load python/3.9.0
-module load java/jdk-11.0.11
 
 env_var="nextflow_env_${USER}"
 cd $HOME
