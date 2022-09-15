@@ -162,7 +162,7 @@ while True:
                 3. label 'OSCAR_large_job' (comes with memory = 16 GB, time = 24 hours, cpus = 2)
                 """
                 print(instructions)
-                print("\nREADME:\n") 
+                print("\nREADME:") 
                 print("\nPlease see https://github.com/compbiocore/workflows_on_OSCAR for further details on how to add the above label options to your workflow.\n")
                 print("Note the setup is designed such that pipelines downloaded from nf-core with their own resource specs within the .nf script will override your defaults.\n")
                 next_dir=homedir + "/nextflow_env_" + username + "/bin/activate"
@@ -190,7 +190,7 @@ while True:
                 3. label 'OSCAR_large_job' (comes with memory = 16 GB, time = 24 hours, cpus = 2)
                 """
                 print(instructions)
-                print("\nREADME:\n")
+                print("\nREADME:")
                 print("\nPlease see https://github.com/compbiocore/workflows_on_OSCAR for further details on how to add the above label options to your workflow.\n")
                 print("Note the setup is designed such that pipelines downloaded from nf-core with their own resource specs within the .nf script will override your defaults.\n")
                 next_dir=homedir + "/nextflow_env_" + username + "/bin/activate"
@@ -276,7 +276,7 @@ while True:
                 print_1=os.popen('grep "^default-resources:" ' + snake_config).read()
                 print_1=print_1.split('[', 1)[1].split(']')[0]
                 print("\nYour default resources for Snakemake are: " + print_1 + "\n")
-                print("\nREADME:\n") 
+                print("\nREADME:") 
                 print("\nPlease see https://github.com/compbiocore/workflows_on_OSCAR for further details on how to configure and run your Snakemake workflows.\n")
                 print("Note that the setup is designed such that snakefiles can specify tasks with their own resource specs that override the defaults.\n")
                 print("To run Snakemake, you must first type and run the snakemake_start command.\n")
@@ -294,7 +294,7 @@ while True:
                 print_1=os.popen('grep "^default-resources:" ' + snake_config).read()
                 print_1=print_1.split('[', 1)[1].split(']')[0]
                 print("\nYour default resources for Snakemake are: " + print_1 + "\n")
-                print("\nREADME:\n")
+                print("\nREADME:")
                 print("\nPlease see https://github.com/compbiocore/workflows_on_OSCAR for further details on how to configure and run your Snakemake workflows.\n")
                 print("Note that the setup is designed such that snakefiles can specify tasks with their own resource specs that override the defaults.\n")
                 print("To run Snakemake, you must first type and run the snakemake_start command.\n")
