@@ -62,8 +62,9 @@ nextflow_start
 # just include the following code to the end of any of the commands below: -c /path/to/your/config.yaml
 # However, as a reminder, this has been handled by the installer for you, so you do NOT need to do this. 
 
-# NOTE: You might need to use the -profile singularity argument with pipelines other than just nf-core pipelines 
-# If so, add this argument to the end of your nextflow run command. 
+# NOTE: You might need to use the -profile singularity argument with pipelines other than pipelines from nf-core (Example 1).
+# The use of -profile in the nextflow run command depends on how the pipeline is built and configured, so please make sure 
+# to look into pipeline documentation. If this argument is required, just add it to the end of your nextflow run command. 
 
 ### EXAMPLE 1: nf-core ###
 
