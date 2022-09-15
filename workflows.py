@@ -166,6 +166,7 @@ while True:
                 print("Note the setup is designed such that pipelines downloaded from nf-core with their own resource specs within the .nf script will override your defaults.\n")
                 next_dir=homedir + "/nextflow_env_" + username + "/bin/activate"
                 print("To run Nextflow pipelines, first type nextflow_start into either the command line or in an sbatch script. \n")
+                print("To now easily run your Nextflow pipelines on OSCAR, use the Nextflow template shell script located in your ~/nextflow_setup directory") 
             if hpc=="no":
                 # Move nextflow.config file to .nextflow folder so it is a software default 
                 os.system('cp ' + next_config + ' $HOME/.nextflow/config')
@@ -192,6 +193,7 @@ while True:
                 print("Note the setup is designed such that pipelines downloaded from nf-core with their own resource specs within the .nf script will override your defaults.\n")
                 next_dir=homedir + "/nextflow_env_" + username + "/bin/activate"
                 print("To run Nextflow pipelines, first type nextflow_start into either the command line or in an sbatch script. \n")
+                print("To now easily run your Nextflow pipelines on OSCAR, use the Nextflow template shell script located in your ~/nextflow_setup directory") 
             break
         # Snakemake software 
         if program=="snakemake":
@@ -275,6 +277,7 @@ while True:
                 print("\nPlease see https://github.com/compbiocore/workflows_on_OSCAR for further details on how to configure and run your Snakemake workflows.\n")
                 print("Note that the setup is designed such that snakefiles can specify tasks with their own resource specs that override the defaults.\n")
                 print("To run Snakemake pipelines, first type snakemake_start into either the command line or in an sbatch script. \n")
+                print("To now easily run your Snakemake pipelines on OSCAR, use the Snakemake template shell script located in your ~/snakemake_setup directory") 
             if hpc=="no":
                 # Print output messaging for user 
                 print("Keeping defaults!")
@@ -291,6 +294,7 @@ while True:
                 print("\nPlease see https://github.com/compbiocore/workflows_on_OSCAR for further details on how to configure and run your Snakemake workflows.\n")
                 print("Note that the setup is designed such that snakefiles can specify tasks with their own resource specs that override the defaults.\n")
                 print("To run Snakemake pipelines, first type snakemake_start into either the command line or in an sbatch script. \n")
+                print("To now easily run your Snakemake pipelines on OSCAR, use the Snakemake template shell script located in your ~/snakemake_setup directory") 
             break
     else: 
         print("Please re-enter a valid option.")
