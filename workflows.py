@@ -10,14 +10,9 @@ import shlex
 import os  
 import re 
 
-# Important Notes: 
+# Note: Requires python 3 to run 
 #
-# Requires python 3 to run 
-#
-# This python script asks the user for some basic inputs and then, based on these inputs, runs their desired workflow 
-# on OSCAR using Nextflow and Snakemake software. 
-#
-# At the moment, only Nextflow is supported; however, Snakemake will be added soon. 
+# Overview: This python script asks the user for some basic inputs and then, based on these inputs, sets up their desired workflow tool on OSCAR 
 
 # Create a function to replace text in config file that gets used in main while loop 
 def replacetext(search_text,replace_text, file_changing):
@@ -56,7 +51,7 @@ def get_defaults(string_you_want):
 
 # Introductory message 
 print("\nWelcome to a program designed to help you easily set up and run workflow management systems on OSCAR!\n")
-# get home directory and username information for use later 
+# get home directory, username, and config information for use later 
 homedir = os.path.expanduser("~")
 username = getuser()
 next_config=homedir + '/nextflow_setup/nextflow.config' 
@@ -64,7 +59,7 @@ snake_config=homedir + '/.config/snakemake/oscar/config.yaml'
 
 # Main while loop 
 while True: 
-    # First ask user if they'd like to use Nextflow or Snakemake - only wrote functionality for Nextflow so far 
+    # First ask user if they'd like to use Nextflow or Snakemake  
     program=input("Please type which software you wish to use: Nextflow or Snakemake? ")
     program=program.lower()
     program=program.strip()
