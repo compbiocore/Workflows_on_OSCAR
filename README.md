@@ -30,7 +30,7 @@ or workflows from nf-core. The use of singularity containers is automatically en
 
 ### Nextflow Template Script for OSCAR
 
-Once Nextflow has been successfully installed and configured on OSCAR, you will find a script called `nextflow_template_script.sh` in the `~/nextflow_setup` directory on OSCAR. This is a template script that you can easily edit and use to run Nextflow pipelines on OSCAR using the `sbatch` command. To do so, first copy this file to your project directory (or to any other directory you need it) and rename the file. A general example of how to do this would be: 
+Once Nextflow has been successfully installed and configured on OSCAR, you will find a script called `nextflow_template_script.sh` in the `~/nextflow_setup` directory. This is a template script that you can easily edit and use to run Nextflow pipelines on OSCAR using the `sbatch` command. To do so, first copy this file to your project directory (or to any other directory you need it) and rename the file. A general example of how to do this would be: 
 
 ```cp ~/nextflow_setup/nextflow_template_script.sh /directory/of/your/choosing/nextflow_run.sh```
 
@@ -58,7 +58,7 @@ Once the installation and configuration process is done, users can run snakemake
 
 ### Snakemake Template Script for OSCAR
 
-Once Snakemake has been successfully installed and configured on OSCAR, you will find a script called `snakemake_template_script.sh` in the `~/snakemake_setup` directory on OSCAR. This is a template script that you can easily edit and use to run Snakemake pipelines on OSCAR using the `sbatch` command. To do so, first copy this file to your project directory (or to any other directory you need it) and rename the file. 
+Once Snakemake has been successfully installed and configured on OSCAR, you will find a script called `snakemake_template_script.sh` in the `~/snakemake_setup` directory. This is a template script that you can easily edit and use to run Snakemake pipelines on OSCAR using the `sbatch` command. To do so, first copy this file to your project directory (or to any other directory you need it) and rename the file. 
 
 Once this is done, you can open and edit the newly copied file using a text editor of your choice (such as `vim`). When you are done editing, exit and save and then run the file using the `sbatch` command. This will run your Snakemake pipeline on OSCAR. Note that inside the `snakemake_template_script.sh` file you will find more detailed instructions and notes helping you to setup and run pipelines using the template file. Please read and follow these instructions. 
 
