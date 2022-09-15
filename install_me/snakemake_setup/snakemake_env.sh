@@ -12,12 +12,12 @@ if [ ! -d "$HOME/$env_var_snake" ]; then
     source $HOME/$env_var_snake/bin/activate 
     #python3 setup.py install
     pip3 install snakemake
+    deactivate
     mkdir -p ~/.config/snakemake
     mkdir -p ~/snakemake_folders/snake_error_log
     mkdir -p ~/snakemake_folders/snake_output
     mkdir -p ~/snakemake_folders/singularities
     cp -r ~/snakemake_setup/oscar ~/.config/snakemake/oscar
-    deactivate
     echo "Snakemake software installed, initializing configuration..." 
 else 
     echo "Snakemake software detected, initializing configuration..."
