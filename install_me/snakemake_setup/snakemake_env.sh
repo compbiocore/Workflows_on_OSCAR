@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# Load modules required for snakemake
+module load python/3.9.0
+
 env_var_snake="snakemake_env_${USER}"
 cd $HOME
 if [ ! -d "$HOME/$env_var_snake" ]; then
