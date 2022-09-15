@@ -34,9 +34,13 @@ Once Nextflow has been successfully installed and configured on OSCAR, you will 
 
 ```cp ~/nextflow_setup/nextflow_template_script.sh /directory/of/your/choosing/nextflow_run.sh```
 
-The above command creates a new script called `nextflow_run.sh` that is directly copied from the template script. Once this is done, you can open and edit the newly copied file using a text editor of your choice (such as `vim`). When you are done editing, exit and save and then run the file using the `sbatch` command. This will run your Nextflow pipeline. Inside the `nextflow_template_script.sh` file you will find detailed instructions and notes helping you to setup and run the file. Please read and follow these. 
+The above command creates a new script called `nextflow_run.sh` that is directly copied from the template script. Once this is done, you can open and edit the newly copied file using a text editor of your choice (such as `vim`). When you are done editing, exit and save and then run the file using the `sbatch` command. This will run your Nextflow pipeline on OSCAR. Note that inside the `nextflow_template_script.sh` file you will find more detailed instructions and notes helping you to setup and run pipelines using the template file. Please read and follow these instructions. 
 
 outside the just open and edit this file using a text editor of your choice (such as `vim`). Once it is edited to your needs, save it under a new name (as a new .sh file 
+
+### File Management using Nextflow
+
+The default configuration sets up Nextflow to use your `HOME` directory for both slurm logs and job output. Furthermore, singularity caching happens in your `scratch` directory. As a reminder, the `scratch` directory is not backed up and files that you do not access for 30 days may be deleted. 
 
 # Snakemake
 
@@ -51,3 +55,26 @@ Once the installation and configuration process is done, users can run snakemake
 - `snakemake -s` executes a workflow, where the `-s` flag is followed by your snakefile. This is used with various options along with project files. **Important Note:** this command will only work after you entered the Snakemake session via `snakemake_start`. 
 - `quit_workflow` exits you out of the Snakemake working session you entered into. If you run this, you will be taken out of your session and unable to run any Snakemake commands until you run `snakemake_start` again. Note that you do not put this command in your sbatch scripts.
 - `snakemake_remove` uninstalls (deletes) Snakemake and all its commands (i.e., `snakemake_start`, `snakemake`, `snakemake_remove`) 
+
+### Snakemake Template Script for OSCAR
+
+Once Snakemake has been successfully installed and configured on OSCAR, you will find a script called `snakemake_template_script.sh` in the `~/snakemake_setup` directory on OSCAR. This is a template script that you can easily edit and use to run Snakemake pipelines on OSCAR using the `sbatch` command. To do so, first copy this file to your project directory (or to any other directory you need it) and rename the file. 
+
+Once this is done, you can open and edit the newly copied file using a text editor of your choice (such as `vim`). When you are done editing, exit and save and then run the file using the `sbatch` command. This will run your Snakemake pipeline on OSCAR. Note that inside the `snakemake_template_script.sh` file you will find more detailed instructions and notes helping you to setup and run pipelines using the template file. Please read and follow these instructions. 
+
+### File Management using Snakemake
+
+When Snakemake is installed and configured, it creates a folder called `snakemake_folders` in your `HOME` directory. This folder contains three folders used for the storage of output and singularity containers. Specifically, within `~/snakemake_folders` is the following: 
+  - `snake_error_log` this is where slurm error log files go 
+  - `snake_output` this is where the output from jobs is stored on your filesystem 
+  - `singularities` this is where singularity files get stored for use by Snakemake
+
+
+# Future updates 
+
+A number of updates are forthcoming in order to make future iterations of this tool more user-friendly. Specifically, we hope to do the following: 
+
+  - Allow users to easily specify where they want slurm and pipeline outputs to go via user prompts during installation process 
+  - Allow for Nextflow to submit jobs to gpu nodes for some tasks 
+  - Expand the tool so users do not have to edit the template scripts to run Nextflow and Snakemake pipelines
+  - Possibly develop GUI and include this software on Brown's Open OnDemand web portal 
