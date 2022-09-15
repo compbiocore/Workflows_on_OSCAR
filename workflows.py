@@ -138,7 +138,7 @@ while True:
                 for i in replacements.keys():
                     replacetext(i, replacements[i], next_config)
                 # Move nextflow.config file to .nextflow folder so it is a software default 
-                #os.system('cp ' + next_config + ' $HOME/.nextflow/config')
+                os.system('cp ' + next_config + ' $HOME/.nextflow/config')
                 # Print output messaging for user 
                 print("\nOUTPUT MESSAGE:")
                 header="""
@@ -165,7 +165,7 @@ while True:
                 print("To further learn how to easily run your Nextflow pipelines on OSCAR, use the Nextflow template shell script located in your ~/nextflow_setup directory.\n") 
             if hpc=="no":
                 # Move nextflow.config file to .nextflow folder so it is a software default 
-                #os.system('cp ' + next_config + ' $HOME/.nextflow/config')
+                os.system('cp ' + next_config + ' $HOME/.nextflow/config')
                 # Print output messaging for user 
                 print("Keeping defaults!")
                 print("\nOUTPUT MESSAGE:")
