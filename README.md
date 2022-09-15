@@ -42,7 +42,9 @@ The default configuration sets up Nextflow to use your `HOME` directory for both
 
 # Snakemake
 <div style="width: 60%; height: 60%">
-![My Image](images/snakemake.png)
+  
+  ![My Image](images/snakemake.png)
+  
 </div>
 
 
