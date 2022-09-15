@@ -62,6 +62,8 @@ nextflow_start
 # just include the following code to the end of any of the commands below: -c /path/to/your/config.yaml
 # However, as a reminder, this has been handled by the installer for you, so you do NOT need to do this. 
 
+# NOTE: Make sure you leave the -profile singularity portion of the code intact. 
+
 ### EXAMPLE 1: nf-core ###
 
 # General example: 
@@ -72,13 +74,13 @@ nextflow run nf-core/ampliseq -profile singularity
 ### EXAMPLE 2: GitHub ###
 
 # General example: 
-nextflow run nextflow-io/<name_of_pipeline_you_want> 
+nextflow run nextflow-io/<name_of_pipeline_you_want> -profile singularity 
 # More specific example (from https://github.com/nextflow-io/rnatoy):  
-nextflow run nextflow-io/rnatoy
+nextflow run nextflow-io/rnatoy -profile singularity 
 
 ### EXAMPLE 3: Your own personally developed pipeline (you need your own .nf file) ###
 
 # General example: 
-nextflow run <path_to_your_nextflow.nf_file_and_project_directory> 
+nextflow run <path_to_your_nextflow.nf_file_and_project_directory> -profile singularity 
 # More specific example (made up): 
-nextflow run ${HOME}/nextflow_tutorial/tutorial.nf   
+nextflow run ${HOME}/nextflow_tutorial/tutorial.nf -profile singularity 
