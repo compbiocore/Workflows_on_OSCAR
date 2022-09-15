@@ -41,7 +41,7 @@ The above command creates a new script called `nextflow_run.sh` that is directly
 The default configuration sets up Nextflow to use your `HOME` directory for both slurm logs and job output. Furthermore, singularity caching happens in your `scratch` directory. As a reminder, the `scratch` directory is not backed up and files that you do not access for 30 days may be deleted. 
 
 # Snakemake
-<div style="width: 60%; height: 60%">
+<div style="width: 100%; height: 90%">
   
   ![My Image](images/snakemake.png)
   
