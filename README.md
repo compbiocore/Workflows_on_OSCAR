@@ -43,7 +43,7 @@ The above command creates a new script called `nextflow_run.sh` that is directly
 The default configuration sets up Nextflow to use your `HOME` directory for both slurm logs and job output. Furthermore, singularity caching happens in your `scratch` directory. As a reminder, the `scratch` directory is not backed up and files that you do not access for 30 days may be deleted. 
 
 # Installing Snakemake
-![My Image](images/snakemake.jpeg)
+![My Image](images/snakemake.png)
   
 When prompted by the CLI tool to type the name of the software you wish to install and set up, just enter `Snakemake` and you will be guided through the rest of the installation and configuration process. During this process, the guide will prompt you to answer a few simple questions, after which the software handles the majority of the configuration details for you.
 
