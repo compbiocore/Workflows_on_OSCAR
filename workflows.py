@@ -162,11 +162,12 @@ while True:
                 3. label 'OSCAR_large_job' (comes with memory = 16 GB, time = 24 hours, cpus = 2)
                 """
                 print(instructions)
+                print("\nREADME:\n") 
                 print("\nPlease see https://github.com/compbiocore/workflows_on_OSCAR for further details on how to add the above label options to your workflow.\n")
                 print("Note the setup is designed such that pipelines downloaded from nf-core with their own resource specs within the .nf script will override your defaults.\n")
                 next_dir=homedir + "/nextflow_env_" + username + "/bin/activate"
-                print("To run Nextflow pipelines, first type nextflow_start into either the command line or in an sbatch script. \n")
-                print("To now easily run your Nextflow pipelines on OSCAR, use the Nextflow template shell script located in your ~/nextflow_setup directory\n") 
+                print("To run Nextflow, you must first type and run the nextflow_start command.\n")
+                print("To further learn how to easily run your Nextflow pipelines on OSCAR, use the Nextflow template shell script located in your ~/nextflow_setup directory.\n") 
             if hpc=="no":
                 # Move nextflow.config file to .nextflow folder so it is a software default 
                 os.system('cp ' + next_config + ' $HOME/.nextflow/config')
@@ -189,11 +190,12 @@ while True:
                 3. label 'OSCAR_large_job' (comes with memory = 16 GB, time = 24 hours, cpus = 2)
                 """
                 print(instructions)
+                print("\nREADME:\n")
                 print("\nPlease see https://github.com/compbiocore/workflows_on_OSCAR for further details on how to add the above label options to your workflow.\n")
                 print("Note the setup is designed such that pipelines downloaded from nf-core with their own resource specs within the .nf script will override your defaults.\n")
                 next_dir=homedir + "/nextflow_env_" + username + "/bin/activate"
-                print("To run Nextflow pipelines, first type nextflow_start into either the command line or in an sbatch script. \n")
-                print("To now easily run your Nextflow pipelines on OSCAR, use the Nextflow template shell script located in your ~/nextflow_setup directory\n") 
+                print("To run Nextflow, you must first type and run the nextflow_start command.\n")
+                print("To further learn how to easily run your Nextflow pipelines on OSCAR, use the Nextflow template shell script located in your ~/nextflow_setup directory.\n") 
             break
         # Snakemake software 
         if program=="snakemake":
@@ -274,10 +276,11 @@ while True:
                 print_1=os.popen('grep "^default-resources:" ' + snake_config).read()
                 print_1=print_1.split('[', 1)[1].split(']')[0]
                 print("\nYour default resources for Snakemake are: " + print_1 + "\n")
+                print("\nREADME:\n") 
                 print("\nPlease see https://github.com/compbiocore/workflows_on_OSCAR for further details on how to configure and run your Snakemake workflows.\n")
                 print("Note that the setup is designed such that snakefiles can specify tasks with their own resource specs that override the defaults.\n")
-                print("To run Snakemake pipelines, first type snakemake_start into either the command line or in an sbatch script. \n")
-                print("To now easily run your Snakemake pipelines on OSCAR, use the Snakemake template shell script located in your ~/snakemake_setup directory\n") 
+                print("To run Snakemake, you must first type and run the snakemake_start command.\n")
+                print("To further learn now to easily run your Snakemake pipelines on OSCAR, use the Snakemake template shell script located in your ~/snakemake_setup directory.\n") 
             if hpc=="no":
                 # Print output messaging for user 
                 print("Keeping defaults!")
@@ -291,10 +294,11 @@ while True:
                 print_1=os.popen('grep "^default-resources:" ' + snake_config).read()
                 print_1=print_1.split('[', 1)[1].split(']')[0]
                 print("\nYour default resources for Snakemake are: " + print_1 + "\n")
+                print("\nREADME:\n")
                 print("\nPlease see https://github.com/compbiocore/workflows_on_OSCAR for further details on how to configure and run your Snakemake workflows.\n")
                 print("Note that the setup is designed such that snakefiles can specify tasks with their own resource specs that override the defaults.\n")
-                print("To run Snakemake pipelines, first type snakemake_start into either the command line or in an sbatch script. \n")
-                print("To now easily run your Snakemake pipelines on OSCAR, use the Snakemake template shell script located in your ~/snakemake_setup directory\n") 
+                print("To run Snakemake, you must first type and run the snakemake_start command.\n")
+                print("To further learn how to easily run your Snakemake pipelines on OSCAR, use the Snakemake template shell script located in your ~/snakemake_setup directory.\n") 
             break
     else: 
         print("Please re-enter a valid option.")
