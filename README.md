@@ -49,7 +49,7 @@ Once the installation and configuration process is done, users can run snakemake
 
 ### Important Snakemake commands
 
-- `snakemake_start` makes it so you're able to run Snakemake. Specifically, it enters you into a virtual environment module where you can run Snakemake commands. You can use the snakemake_start command in an interactive session on OSCAR (via `interact`) or in your sbatch script by putting it before any snakemake commands you use in the script. 
+- `snakemake_start` makes it so you're able to run Snakemake. Specifically, it enters you into a virtual environment module where you can run Snakemake commands. You can use this command in an interactive session on OSCAR (via `interact`) or in your sbatch script by putting it before any snakemake commands you use in the script. 
 - `snakemake -h` prints helpful information about what commands and options exist for Snakemake software. **Important Note:** this command will only work after you entered the Snakemake session via `snakemake_start`. 
 - `snakemake -s` executes a workflow, where the `-s` flag is followed by your snakefile. This is used with various options along with project files. **Important Note:** this command will only work after you entered the Snakemake session via `snakemake_start`. 
 - `quit_workflow` exits you out of the Snakemake working session you entered into. If you run this, you will be taken out of your session and unable to run any Snakemake commands until you run `snakemake_start` again. Note that you do not put this command in your sbatch scripts.
