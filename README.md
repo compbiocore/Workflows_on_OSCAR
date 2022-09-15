@@ -14,6 +14,7 @@ To set up Nextflow and/or Snakemake for OSCAR, just `git clone` this repo into y
 Running the above command in your terminal will initiate the installation and configuration process, walking the user through a user-friendly guide to setting up and configuring Nextflow and Snakemake to run on OSCAR according to the user's computing needs. 
 
 # Nextflow 
+![My Image](images/nextflow.png)
 
 When launched, the CLI tool will prompt the user to type the name of the software they wish to install and set up.  Just enter `Nextflow` and you will be guided through the rest of the installation and configuration process. During this process, the guide will prompt you to answer a few simple questions, after which the software handles the majority of the configuration details for you. 
 
