@@ -23,7 +23,7 @@ or workflows from nf-core. The use of singularity containers is automatically en
 ### Important Nextflow commands
 
 - `nextflow_start` makes it so you're able to run Nextflow. Specifically, it enters you into a virtual environment module where you can run Nextflow commands. You can use this command in an interactive session on OSCAR (via `interact`) or in your sbatch script by putting it before any nextflow commands you use in the script. 
-- `nextflow -h` prints helpful information about all the commands and options that exist for Nextflow software. **Important Note:** this command will only work after you entered the Nextflow session via `nextflow_start`. 
+- `nextflow -h` prints helpful information about all the commands and options that exist for Nextflow software. **Important Note:** this command will only work after you entered the Nextflow session via `nextflow_start`. For a full list of all the nextflow commands and options you can run, please see: [text to show] (https://www.nextflow.io/docs/latest/cli.html) 
 - `nextflow run` executes a pipeline project. This is used with various options along with your project files. **Important Note:** this command will only work after you entered the Nextflow session via `nextflow_start`. 
 - `quit_workflow` exits you out of the Nextflow working session you entered into. If you run this, you will be taken out of your session and unable to run any Nextflow commands until you run `nextflow_start` again. Note that you do not put this command in your sbatch scripts.
 - `nextflow_remove` uninstalls (deletes) Nextflow and all its commands (i.e., `nextflow_start`, `nextflow run`, `nextflow_remove`) 
