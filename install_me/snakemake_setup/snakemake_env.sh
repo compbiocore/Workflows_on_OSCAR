@@ -8,7 +8,7 @@ if [ ! -d "$HOME/$env_var_snake" ]; then
     #git clone https://bitbucket.org/snakemake/snakemake.git
     #cd snakemake
     # Create virutal environment for user 
-    python3.9 -m venv $env_var_snake 
+    python3.9 -m venv $env_var_snake --system-site-packages
     source $HOME/$env_var_snake/bin/activate 
     #python3 setup.py install
     pip3 install snakemake
