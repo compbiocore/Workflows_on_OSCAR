@@ -71,7 +71,8 @@ while True:
             try: 
                 os.system('cp -r ~/workflows_on_OSCAR/install_me/nextflow_setup ~/nextflow_setup') 
                 bash_file='bash ' + homedir + '/nextflow_setup/nextflow_env.sh'
-                call(shlex.split(bash_file)) 
+                os.system(bash_file)
+                #call(shlex.split(bash_file)) 
             except OSError:
                 print("Nextflow software setup error, please contact: jordan_lawson@brown.edu")
                 break
