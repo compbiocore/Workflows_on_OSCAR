@@ -18,9 +18,9 @@ else
     echo "Nextflow software detected, initializing configuration..."
 fi 
 
-# change .bashrc and source aliases to make it more user-friendly 
+# change .bashrc to make it more user-friendly 
 if [ ! -f "$HOME/.nextflow_specific_aliases" ]; then touch ~/.nextflow_specific_aliases; fi 
-echo 'alias nextflow_start="if ! echo $PATH | grep -oq 'java/jdk-11.0.11'; then module load java/jdk-11.0.11; fi && source ~/nextflow_env_${USER}/bin/activate"' >> $HOME/.nextflow_specific_aliases 
+echo 'alias nextflow_start="module load java/jdk-11.0.11 && source ~/nextflow_env_${USER}/bin/activate"' >> $HOME/.nextflow_specific_aliases 
 echo 'alias nextflow_remove="rm -rf ~/nextflow_env_${USER} ~/.nextflow ~/nextflow_setup ~/.nextflow_specific_aliases; unalias nextflow_start; unalias nextflow_remove"' >> $HOME/.nextflow_specific_aliases 
 grep -qxF 'if [ -e $HOME/.nextflow_specific_aliases ]; then source $HOME/.nextflow_specific_aliases; fi' ~/.bashrc || echo 'if [ -e $HOME/.nextflow_specific_aliases ]; then source $HOME/.nextflow_specific_aliases; fi' >> ~/.bashrc
 
