@@ -27,6 +27,9 @@
 # 2.) Setup  
 #############
 
+# Load necessary modules 
+module load python/3.9.0
+
 # Enter Snakemake virtual environment module so you can run Snakemake commands 
 snakemake_start
 
