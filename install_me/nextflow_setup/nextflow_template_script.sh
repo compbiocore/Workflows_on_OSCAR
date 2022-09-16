@@ -33,9 +33,6 @@
 export SINGULARITY_CACHEDIR=$HOME/scratch
 export NXF_SINGULARITY_CACHEDIR=$HOME/scratch
 
-# Load necessary modules 
-module load python/3.9.0 java/jdk-11.0.11
-
 # Enter Nextflow virtual environment module so you can run Nextflow commands 
 nextflow_start
 
