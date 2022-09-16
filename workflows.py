@@ -70,7 +70,7 @@ while True:
             # Set up environment, if it doesnt exist 
             try: 
                 os.system('cp -r ~/workflows_on_OSCAR/install_me/nextflow_setup ~/nextflow_setup') 
-                bash_file='source ' + homedir + '/nextflow_setup/nextflow_env.sh'
+                bash_file='bash ' + homedir + '/nextflow_setup/nextflow_env.sh'
                 os.system(bash_file)
             except OSError:
                 print("Nextflow software setup error, please contact: jordan_lawson@brown.edu")
@@ -197,7 +197,7 @@ while True:
             # Set up environment, if it doesnt exist 
             try: 
                 os.system('cp -r ~/workflows_on_OSCAR/install_me/snakemake_setup ~/snakemake_setup')
-                bash_file='source ' + homedir + '/snakemake_setup/snakemake_env.sh'
+                bash_file='bash ' + homedir + '/snakemake_setup/snakemake_env.sh'
                 os.system(bash_file)
             except OSError:
                 print("Snakemake software setup error, please contact: jordan_lawson@brown.edu")
