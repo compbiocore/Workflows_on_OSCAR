@@ -6,8 +6,8 @@ cd $HOME
 if [ ! -d "$HOME/$env_var" ]; then
     echo "Setting up and installing Nextflow.." 
     # Create virutal environment for user 
-    module load python/3.9.0
-    module load java/jdk-11.0.11
+    #module load python/3.9.0
+    #module load java/jdk-11.0.11
     virtualenv $env_var
     source $HOME/$env_var/bin/activate 
     wget -qO- https://get.nextflow.io | bash
