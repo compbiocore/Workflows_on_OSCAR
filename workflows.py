@@ -57,7 +57,6 @@ username = getuser()
 next_config=homedir + '/nextflow_setup/nextflow.config' 
 snake_config=homedir + '/.config/snakemake/oscar/config.yaml'
 
-os.system('module load python/3.9.0 java/jdk-11.0.11')
 # Main while loop 
 while True: 
     # First ask user if they'd like to use Nextflow or Snakemake  
@@ -72,7 +71,7 @@ while True:
             try: 
                 os.system('cp -r ~/workflows_on_OSCAR/install_me/nextflow_setup ~/nextflow_setup') 
                 bash_file='bash ' + homedir + '/nextflow_setup/nextflow_env.sh'
-                os.system(bash_file)
+                subprocess(bash_file, shell=False)
             except OSError:
                 print("Nextflow software setup error, please contact: jordan_lawson@brown.edu")
                 break
