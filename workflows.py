@@ -71,7 +71,7 @@ while True:
             try: 
                 os.system('cp -r ~/workflows_on_OSCAR/install_me/nextflow_setup ~/nextflow_setup') 
                 bash_file='bash ' + homedir + '/nextflow_setup/nextflow_env.sh'
-                call(bash_file)
+                subprocess.call(bash_file, shell=False)
             except OSError:
                 print("Nextflow software setup error, please contact: jordan_lawson@brown.edu")
                 break
