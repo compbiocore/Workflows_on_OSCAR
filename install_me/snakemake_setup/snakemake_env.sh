@@ -25,6 +25,6 @@ fi
 
 # change .bashrc and source aliases to make it more user-friendly 
 if [ ! -f "$HOME/.snakemake_specific_aliases" ]; then touch ~/.snakemake_specific_aliases; fi 
-echo 'alias snakemake_start="if ! echo $PATH | grep -oq "python/3.9.0"; then module load python/3.9.0; fi && source ~/snakemake_env_${USER}/bin/activate"' >> $HOME/.snakemake_specific_aliases 
+echo 'alias snakemake_start="if ! echo $PATH | grep -oq 'python/3.9.0'; then module load python/3.9.0; fi && source ~/snakemake_env_${USER}/bin/activate"' >> $HOME/.snakemake_specific_aliases 
 echo 'alias snakemake_remove="rm -rf ~/snakemake_env_${USER} ~/snakemake_setup ~/.snakemake_specific_aliases ~/.config/snakemake ~/snakemake_folders; unalias snakemake_start; unalias snakemake_remove"' >> $HOME/.snakemake_specific_aliases 
 grep -qxF 'if [ -e $HOME/.snakemake_specific_aliases ]; then source $HOME/.snakemake_specific_aliases; fi' ~/.bashrc || echo 'if [ -e $HOME/.snakemake_specific_aliases ]; then source $HOME/.snakemake_specific_aliases; fi' >> ~/.bashrc
