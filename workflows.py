@@ -3,7 +3,7 @@
 ################################################################
 
 from getpass import getpass, getuser
-from subprocess import call, PIPE, Popen
+from subprocess import call, PIPE, Popen, run
 import shlex 
 #import fileinput
 #import sys
@@ -71,7 +71,7 @@ while True:
             try: 
                 os.system('cp -r ~/workflows_on_OSCAR/install_me/nextflow_setup ~/nextflow_setup') 
                 bash_file='bash ' + homedir + '/nextflow_setup/nextflow_env.sh'
-                subprocess(bash_file, shell=False)
+                run(bash_file, shell=False)
             except OSError:
                 print("Nextflow software setup error, please contact: jordan_lawson@brown.edu")
                 break
