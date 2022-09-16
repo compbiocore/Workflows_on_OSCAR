@@ -3,7 +3,7 @@
 ################################################################
 
 from getpass import getpass, getuser
-from subprocess import call, PIPE, Popen, call
+from subprocess import call, PIPE, Popen
 import shlex 
 #import fileinput
 #import sys
