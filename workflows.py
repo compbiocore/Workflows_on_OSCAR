@@ -69,6 +69,7 @@ while True:
         if program=="nextflow":
             # Set up environment, if it doesnt exist 
             try: 
+                os.system('module load python/3.9.0 java/jdk-11.0.11')
                 os.system('cp -r ~/workflows_on_OSCAR/install_me/nextflow_setup ~/nextflow_setup') 
                 bash_file='bash ' + homedir + '/nextflow_setup/nextflow_env.sh'
                 call(shlex.split(bash_file)) 
@@ -196,6 +197,7 @@ while True:
         if program=="snakemake":
             # Set up environment, if it doesnt exist 
             try: 
+                os.system('module load python/3.9.0')
                 os.system('cp -r ~/workflows_on_OSCAR/install_me/snakemake_setup ~/snakemake_setup')
                 bash_file='bash ' + homedir + '/snakemake_setup/snakemake_env.sh'
                 call(shlex.split(bash_file)) 
