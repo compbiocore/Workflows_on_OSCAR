@@ -18,9 +18,10 @@
 #    1. Specify desired HPC resources in your .nf pipeline file 
 #    2. Specify your desired HPC resources in your own config.yaml file and call that during nextflow run (see Running Nextflow section below)
 
-# Resources for base job that submits other jobs - only need to edit email here
-#SBATCH --time=0-02:00:00
+# Resources for base job that submits other jobs - edit email here; if job gets killed due to limited resources, increase resources as needed 
+#SBATCH --time=0-05:00:00
 #SBATCH --nodes=1
+#SBATCH --mem=8g
 #SBATCH --mail-type=ALL
 #SBATCH --mail-user=enter_email_here@brown.edu   # <----- EDIT this to be your Brown email, but do not remove the # signs here  
 
