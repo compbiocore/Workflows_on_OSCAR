@@ -18,10 +18,10 @@
 #    1. Create your own profile and use that in snakemake command (more work)
 #    2. Specify desired HPC resources per task directly in your Snakefile (much easier) 
 
-# Resources for base job that submits other jobs - don't need to edit 
-#SBATCH --time=0-02:00:00
+# Resources for base job that submits other jobs - if job gets killed due to limited resources, increase resources as needed 
+#SBATCH --time=0-05:00:00
 #SBATCH --nodes=1
-#SBATCH --mem=2GB
+#SBATCH --mem=8g
 
 #############
 # 2.) Setup  
