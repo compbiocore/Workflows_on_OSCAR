@@ -12,7 +12,6 @@
 
 # IMPORTANT NOTE: Snakemake has already been configured for you to be used with OSCAR and have certain default resources 
 # These defaults were specified by you during installation and have been placed in a profile in Snakemake's configuration directory 
-# As a result, you do NOT need to add any further HPC specifications to this script
 # However, Snakemake has also been configured to allow you to flexibly override the software defaults for any job
 # IF you wish to override defaults, there are 2 ways (pick ONLY one): 
 #    1. Create your own profile and use that in snakemake command (more work)
