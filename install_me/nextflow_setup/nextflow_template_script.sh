@@ -12,7 +12,6 @@
 
 # IMPORTANT NOTE: Nextflow has already been configured for you to be used with OSCAR and have certain default resources 
 # These defaults were specified by you during installation and have been placed in a config.yaml file in Nextflow's configuration path
-# As a result, you do NOT need to add any further HPC specifications; you just need to change the email below
 # However, Nextflow has also been configured to allow you to flexibly add to or override the software defaults for any job you run
 # IF you wish to override defaults, there are 2 ways (pick ONLY one): 
 #    1. Specify desired HPC resources in your .nf pipeline file 
