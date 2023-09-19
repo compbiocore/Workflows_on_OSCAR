@@ -26,7 +26,7 @@ or workflows from nf-core. The use of singularity containers is automatically en
 - `nextflow -h` prints helpful information about all the commands and options that exist for Nextflow software. _**Important Note:** this command will only work after you entered the Nextflow session via `nextflow_start`_. For a full list of all the nextflow commands and options you can run, please visit: https://www.nextflow.io/docs/latest/cli.html 
 - `nextflow run` executes a pipeline project. This is used with various options along with your project files. _**Important Note:** this command will only work after you entered the Nextflow session via `nextflow_start`_. 
 - `quit_workflow` exits you out of the Nextflow working session you entered into. If you run this, you will be taken out of your session and unable to run any Nextflow commands until you run `nextflow_start` again. Note that you do not put this command in your sbatch scripts.
-- `nextflow_remove` uninstalls (deletes) Nextflow and all its commands (i.e., `nextflow_start`, `nextflow run`, `nextflow_remove`) 
+- `nextflow_remove` uninstalls (deletes) Nextflow and all of its associated commands (i.e., `nextflow_start`, `nextflow run`, `nextflow_remove`) 
 
 ### Nextflow Template Script for OSCAR
 
@@ -53,7 +53,7 @@ Once the installation and configuration process is done, users can run snakemake
 - `snakemake -h` prints helpful information about all the commands and options that exist for Snakemake software. **Important Note:** this command will only work after you entered the Snakemake session via `snakemake_start`. For a full list of all the commands and options you can run with Snakemake, please visit: https://snakemake.readthedocs.io/en/stable/executing/cli.html
 - `snakemake -s` executes a workflow, where the `-s` flag is followed by your snakefile. This is used with various options along with project files. **Important Note:** this command will only work after you entered the Snakemake session via `snakemake_start`. 
 - `quit_workflow` exits you out of the Snakemake working session you entered into. If you run this, you will be taken out of your session and unable to run any Snakemake commands until you run `snakemake_start` again. Note that you do not put this command in your sbatch scripts.
-- `snakemake_remove` uninstalls (deletes) Snakemake and all its commands (i.e., `snakemake_start`, `snakemake`, `snakemake_remove`) 
+- `snakemake_remove` uninstalls (deletes) Snakemake and all of its associated commands (i.e., `snakemake_start`, `snakemake`, `snakemake_remove`) 
 
 ### Snakemake Template Script for OSCAR
 
