@@ -6,7 +6,7 @@ cd $HOME
 if [ ! -d "$HOME/$env_var" ]; then
     echo "Setting up and installing Nextflow.." 
     # Create virutal environment for user 
-    virtualenv $env_var
+    python -m venv $env_var
     source $HOME/$env_var/bin/activate 
     wget -qO- https://get.nextflow.io | bash
     # Make nextflow executable and move to path 
